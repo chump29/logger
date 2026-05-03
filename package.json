@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -28,8 +28,6 @@
     "build:copy": "cp -f LICENSE package.json README.md dist/",
     "build:dts": "bunx tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false",
     "clean": "rimraf node_modules bun.lock",
-    "preinstall": "bunx only-allow bun",
-    "postinstall": "config-init",
     "lint": "biome check --write --verbose .",
     "test": "bun test --coverage"
   },
