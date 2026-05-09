@@ -2,20 +2,6 @@ import { afterAll, describe, expect, jest, spyOn, test } from "bun:test"
 
 import { error, info } from "./index.ts"
 
-const NUM_TIMES_INFO: number = 4
-const NUM_TIMES_ERROR: number = 3
-
-interface ITest {
-  is: string
-}
-
-class TestError extends Error {
-  constructor(reason: string) {
-    super(reason)
-    this.name = "TestError"
-  }
-}
-
 afterAll((): void => {
   jest.restoreAllMocks()
 })
@@ -29,6 +15,12 @@ describe("index.ts", (): void => {
   })
 
   test("info pass", (): void => {
+    const NUM_TIMES_INFO: number = 4
+
+    interface ITest {
+      is: string
+    }
+
     info(
       "this",
       {
@@ -50,6 +42,15 @@ describe("index.ts", (): void => {
   })
 
   test("error pass", (): void => {
+    class TestError extends Error {
+      constructor(reason: string) {
+        super(reason)
+        this.name = "TestError"
+      }
+    }
+
+    const NUM_TIMES_ERROR: number = 3
+
     error("error", new TestError("test"))
     expect(errorSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
   })

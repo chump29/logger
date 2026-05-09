@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -22,23 +22,29 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "bun run build:clean && bun run build:build && bun run build:dts && bun run build:copy",
+    "build": "bun run build:clean && bun run build:build && bun run build:dts && bun run build:copy && bun run build:rm",
     "build:build": "bun build ./index.ts --target node --minify --outdir dist",
     "build:clean": "rimraf dist",
     "build:copy": "cp -f LICENSE package.json README.md dist/",
-    "build:dts": "bunx tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false",
-    "clean": "rimraf node_modules bun.lock",
+    "build:dts": "bunx tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false --skipLibCheck",
+    "build:rm": "rm dist/index.test.d.ts",
+    "clean": "rimraf node_modules bun.lock .vscode dist coverage",
+    "clean:coverage": "rimraf coverage",
     "lint": "biome check --write --verbose .",
-    "test": "bun test --coverage"
+    "prepare": "config-init",
+    "test": "bun run clean:coverage && bun test --coverage --isolate --coverage-reporter=text --coverage-reporter=lcov"
+  },
+  "overrides": {
+    "typescript": "^6.0.3"
   },
   "dependencies": {
-    "date-and-time": "^4.4.0"
+    "date-and-time": "^4.5.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.14",
-    "@postfmly/config": "^1.2.0",
+    "@biomejs/biome": "^2.4.15",
+    "@postfmly/config": "^1.2.16",
     "@types/bun": "^1.3.13",
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.6.2",
     "rimraf": "^6.1.3"
   },
   "packageManager": "bun@1.3.13",
