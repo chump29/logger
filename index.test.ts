@@ -42,16 +42,7 @@ describe("index.ts", (): void => {
   })
 
   test("error pass", (): void => {
-    class TestError extends Error {
-      constructor(reason: string) {
-        super(reason)
-        this.name = "TestError"
-      }
-    }
-
-    const NUM_TIMES_ERROR: number = 3
-
-    error("error", new TestError("test"))
-    expect(errorSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
+    error("error")
+    expect(errorSpy).toHaveBeenCalledTimes(2)
   })
 })

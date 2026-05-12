@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -23,11 +23,11 @@
   "types": "index.d.ts",
   "scripts": {
     "build": "bun run build:clean && bun run build:build && bun run build:dts && bun run build:copy && bun run build:rm",
-    "build:build": "bun build ./index.ts --target node --minify --outdir dist",
+    "build:build": "bun run build.ts",
     "build:clean": "rimraf dist",
     "build:copy": "cp -f LICENSE package.json README.md dist/",
     "build:dts": "bunx tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false --skipLibCheck",
-    "build:rm": "rm dist/index.test.d.ts",
+    "build:rm": "rm dist/index.test.d.ts dist/build.d.ts",
     "clean": "rimraf node_modules bun.lock .vscode dist coverage",
     "clean:coverage": "rimraf coverage",
     "lint": "biome check --write --verbose .",
@@ -41,8 +41,11 @@
     "date-and-time": "^4.5.0"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.2.16",
     "rimraf": "^6.1.3"
+  },
+  "peerDependencies": {
+    "@postfmly/config": "^1.2.16",
+    "@postfmly/logger": "^1.0.3"
   },
   "packageManager": "bun@1.3.13",
   "engines": {

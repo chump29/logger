@@ -34,7 +34,7 @@ error("error text", new Error("foo"))
 ### Building
 
 ```bash
-bun run build
+./build.sh
 ```
 
 ---
@@ -42,7 +42,7 @@ bun run build
 ### Testing
 
 ```bash
-bun run test
+./test.sh
 ```
 
 ---
