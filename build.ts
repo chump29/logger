@@ -4,8 +4,7 @@ import { exit } from "node:process"
 
 import { type BuildMetafile, type BuildOutput, build } from "bun"
 
-import { error } from "@postfmly/logger"
-
+import { error } from "./index.ts"
 import { devDependencies, peerDependencies } from "./package.json" with { type: "json" }
 
 const externalDependencies: string[] = [
