@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -38,7 +38,8 @@
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "date-and-time": "^4.5.0"
+    "date-and-time": "^4.5.0",
+    "yoctocolors": "^2.1.2"
   },
   "devDependencies": {
     "rimraf": "^6.1.3"
