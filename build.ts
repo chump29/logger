@@ -18,7 +18,6 @@ await build({
   metafile: true,
   minify: true,
   outdir: "./dist",
-  target: "node",
   entrypoints: [
     "./index.ts"
   ]
