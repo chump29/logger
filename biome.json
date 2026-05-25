@@ -6,7 +6,8 @@
   "files": {
     "includes": [
       "!!.vscode",
-      "!!tsconfig.json"
+      "!!tsconfig.json",
+      "!!test/index.js"
     ]
   }
 }

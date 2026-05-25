@@ -5,6 +5,7 @@
     "": {
       "name": "@postfmly/logger",
       "dependencies": {
+        "browser-or-node": "^3.0.0",
         "dayjs": "^1.11.20",
         "picocolors": "^1.1.1",
       },
@@ -12,7 +13,7 @@
         "rimraf": "^6.1.3",
       },
       "peerDependencies": {
-        "@postfmly/config": "^1.2.26",
+        "@postfmly/config": "^1.2.28",
       },
     },
   },
@@ -38,7 +39,7 @@
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.4.15", "https://npm.postfmly.com/@biomejs/cli-win32-x64/-/cli-win32-x64-2.4.15.tgz", { "os": "win32", "cpu": "x64" }, "sha512-zBrGq5mx5wwpnow4+2BxUvleDM+GNd4sLbPaMapsSLQLD0NGRCquqPBTgN+7XkUteHvj7M+BstuI8tmnV7+HgQ=="],
 
-    "@postfmly/config": ["@postfmly/config@1.2.26", "https://npm.postfmly.com/@postfmly/config/-/config-1.2.26.tgz", { "peerDependencies": { "@biomejs/biome": "^2.4.15", "@types/bun": "^1.3.14", "@types/node": "^25.9.1", "globals": "^17.6.0", "typescript": "^6.0.3" }, "bin": { "config-init": "bin/init" } }, "sha512-nbvHI7K+biKAAaZtmyN466a1QG+wONPqiNe39SaewBvOcrJCQLVhq5AxsaCYTckPj1vouZqIQf0Gqc2Es7ECsg=="],
+    "@postfmly/config": ["@postfmly/config@1.2.28", "https://npm.postfmly.com/@postfmly/config/-/config-1.2.28.tgz", { "peerDependencies": { "@biomejs/biome": "^2.4.15", "@types/bun": "^1.3.14", "@types/node": "^25.9.1", "globals": "^17.6.0", "typescript": "^6.0.3" }, "bin": { "config-init": "bin/init" } }, "sha512-+xkkrnXO/GVyopUhFidPUR/8x9cRtK37cj+o+AnZPjyixyqKZYNcCPpN8d2g2xWYS6qiLqxMJ46xXKOxbWSJww=="],
 
     "@types/bun": ["@types/bun@1.3.14", "https://npm.postfmly.com/@types/bun/-/bun-1.3.14.tgz", { "dependencies": { "bun-types": "1.3.14" } }, "sha512-h1hFqFVcvAvD9j9K7ZW7vd82aSA+rTdznZa+5bwvCwqSB1jmmfLcbIWhOLx1/+boy/xmjgCs/OMUL8hRJSmnPw=="],
 
@@ -47,6 +48,8 @@
     "balanced-match": ["balanced-match@4.0.4", "https://npm.postfmly.com/balanced-match/-/balanced-match-4.0.4.tgz", {}, "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA=="],
 
     "brace-expansion": ["brace-expansion@5.0.6", "https://npm.postfmly.com/brace-expansion/-/brace-expansion-5.0.6.tgz", { "dependencies": { "balanced-match": "^4.0.2" } }, "sha512-kLpxurY4Z4r9sgMsyG0Z9uzsBlgiU/EFKhj/h91/8yHu0edo7XuixOIH3VcJ8kkxs6/jPzoI6U9Vj3WqbMQ94g=="],
+
+    "browser-or-node": ["browser-or-node@3.0.0", "https://npm.postfmly.com/browser-or-node/-/browser-or-node-3.0.0.tgz", {}, "sha512-iczIdVJzGEYhP5DqQxYM9Hh7Ztpqqi+CXZpSmX8ALFs9ecXkQIeqRyM6TfxEfMVpwhl3dSuDvxdzzo9sUOIVBQ=="],
 
     "bun-types": ["bun-types@1.3.14", "https://npm.postfmly.com/bun-types/-/bun-types-1.3.14.tgz", { "dependencies": { "@types/node": "*" } }, "sha512-4N0ig0fEomHt5R0KCFWjovxow98rIoRwKolrYdCcknNwMekCXRnWEUvgu5soYV8QXtVsrUD8B95MBOZGPvr6KQ=="],
 

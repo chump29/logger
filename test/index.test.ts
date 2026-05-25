@@ -1,6 +1,6 @@
-import { afterAll, describe, expect, jest, spyOn, test } from "bun:test"
+import { afterAll, describe, expect, jest, mock, spyOn, test } from "bun:test"
 
-import { error, info } from "./index.ts"
+import { error, info } from "../index.ts"
 
 afterAll((): void => {
   jest.restoreAllMocks()
@@ -10,6 +10,12 @@ describe("index.ts", (): void => {
   const NUM_TIMES: number = 5
 
   const infoSpy: jest.Mock = spyOn(console, "info")
+
+  mock.module("browser-or-node", (): unknown => {
+    return {
+      isBrowser: jest.fn().mockReturnValue(true)
+    }
+  })
 
   test("info fail", (): void => {
     info()

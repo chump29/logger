@@ -44,7 +44,11 @@ error("error text", new Error("foo"))
 ### Testing
 
 ```bash
+# bun
 ./test.sh
+
+# browser
+bun run test:browser
 ```
 
 ---

@@ -1,3 +1,4 @@
+import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
 import { bgBlue, bgRed, cyan, red, white } from "picocolors"
 
@@ -6,9 +7,16 @@ const getTime = (): string => {
 }
 
 const handleObject = (obj: object): void => {
+  if (isBrowser) {
+    console.groupCollapsed("Click for more information...")
+  }
+
   console.dir(obj, {
     depth: null
   })
+  if (isBrowser) {
+    console.groupEnd()
+  }
 }
 
 /**

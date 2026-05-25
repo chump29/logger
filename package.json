@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -23,21 +23,24 @@
   "types": "index.d.ts",
   "scripts": {
     "build": "bun run build:clean && bun run build:build && bun run build:dts && bun run build:copy && bun run build:rm",
+    "build:browser": "bun build ./index.ts --outdir ./test --target browser --minify",
     "build:build": "bun run build.ts",
-    "build:clean": "rimraf dist",
+    "build:clean": "rimraf dist test/index.js",
     "build:copy": "cp -f LICENSE package.json README.md dist/",
     "build:dts": "bunx tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false --skipLibCheck",
-    "build:rm": "rm dist/index.test.d.ts dist/build.d.ts",
+    "build:rm": "rm -rf dist/build.d.ts dist/test",
     "clean": "rimraf node_modules bun.lock .vscode dist coverage",
     "clean:coverage": "rimraf coverage",
     "lint": "biome check --write --verbose .",
     "prepare": "config-init",
-    "test": "bun run clean:coverage && bun test --coverage --isolate --coverage-reporter=text --coverage-reporter=lcov"
+    "test": "bun run clean:coverage && bun test --coverage --isolate --coverage-reporter=text --coverage-reporter=lcov",
+    "test:browser": "bun run build:browser && bunx --bun serve test"
   },
   "overrides": {
     "typescript": "^6.0.3"
   },
   "dependencies": {
+    "browser-or-node": "^3.0.0",
     "dayjs": "^1.11.20",
     "picocolors": "^1.1.1"
   },
@@ -45,7 +48,7 @@
     "rimraf": "^6.1.3"
   },
   "peerDependencies": {
-    "@postfmly/config": "^1.2.26"
+    "@postfmly/config": "^1.2.28"
   },
   "packageManager": "bun@1.3.14",
   "engines": {

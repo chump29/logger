@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Test</title>
+</head>
+
+<body>
+  <main>
+    <h1>Open console to view results.</h1>
+  </main>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "@postfmly/config": "./index.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { error, info } from "@postfmly/config"
+
+    info(
+      "this",
+      {
+        is: "a"
+      },
+      [
+        "simple",
+        "test"
+      ],
+      null
+    )
+
+    error(
+      "test",
+      [
+        "me"
+      ],
+      new Error("This is a test"),
+      null
+    )
+  </script>
+</body>
+
+</html>
