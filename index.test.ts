@@ -7,6 +7,8 @@ afterAll((): void => {
 })
 
 describe("index.ts", (): void => {
+  const NUM_TIMES: number = 5
+
   const infoSpy: jest.Mock = spyOn(console, "info")
 
   test("info fail", (): void => {
@@ -15,8 +17,6 @@ describe("index.ts", (): void => {
   })
 
   test("info pass", (): void => {
-    const NUM_TIMES_INFO: number = 4
-
     interface ITest {
       is: string
     }
@@ -29,20 +29,34 @@ describe("index.ts", (): void => {
       [
         "simple",
         "test"
-      ] as string[]
+      ] as string[],
+      null
     )
-    expect(infoSpy).toHaveBeenCalledTimes(NUM_TIMES_INFO)
+
+    expect(infoSpy).toHaveBeenCalledTimes(NUM_TIMES)
   })
 
   const errorSpy: jest.Mock = spyOn(console, "error")
 
   test("error fail", (): void => {
     error()
+
     expect(errorSpy).not.toHaveBeenCalledTimes(1)
   })
 
   test("error pass", (): void => {
-    error("error")
-    expect(errorSpy).toHaveBeenCalledTimes(2)
+    error(
+      "test",
+      [
+        "me"
+      ],
+      {
+        message: "This is a test",
+        name: "TestError"
+      } as Error,
+      null
+    )
+
+    expect(errorSpy).toHaveBeenCalledTimes(NUM_TIMES)
   })
 })

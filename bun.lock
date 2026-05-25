@@ -5,14 +5,14 @@
     "": {
       "name": "@postfmly/logger",
       "dependencies": {
-        "date-and-time": "^4.5.0",
+        "dayjs": "^1.11.20",
         "picocolors": "^1.1.1",
       },
       "devDependencies": {
         "rimraf": "^6.1.3",
       },
       "peerDependencies": {
-        "@postfmly/config": "^1.2.19",
+        "@postfmly/config": "^1.2.26",
       },
     },
   },
@@ -38,11 +38,11 @@
 
     "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.4.15", "https://npm.postfmly.com/@biomejs/cli-win32-x64/-/cli-win32-x64-2.4.15.tgz", { "os": "win32", "cpu": "x64" }, "sha512-zBrGq5mx5wwpnow4+2BxUvleDM+GNd4sLbPaMapsSLQLD0NGRCquqPBTgN+7XkUteHvj7M+BstuI8tmnV7+HgQ=="],
 
-    "@postfmly/config": ["@postfmly/config@1.2.19", "https://npm.postfmly.com/@postfmly/config/-/config-1.2.19.tgz", { "peerDependencies": { "@biomejs/biome": "^2.4.15", "@types/bun": "^1.3.13", "@types/node": "^25.6.0", "typescript": "^6.0.3" }, "bin": { "config-init": "bin/init" } }, "sha512-B7oGmOkMe8v50vDtUtmcVOpiTwtpXnTfAzk5ZYRlrd/wXIdqSCQOPEBd+U6MWp5vqb2Ay9CLVLcNiOisy1TvTA=="],
+    "@postfmly/config": ["@postfmly/config@1.2.26", "https://npm.postfmly.com/@postfmly/config/-/config-1.2.26.tgz", { "peerDependencies": { "@biomejs/biome": "^2.4.15", "@types/bun": "^1.3.14", "@types/node": "^25.9.1", "globals": "^17.6.0", "typescript": "^6.0.3" }, "bin": { "config-init": "bin/init" } }, "sha512-nbvHI7K+biKAAaZtmyN466a1QG+wONPqiNe39SaewBvOcrJCQLVhq5AxsaCYTckPj1vouZqIQf0Gqc2Es7ECsg=="],
 
     "@types/bun": ["@types/bun@1.3.14", "https://npm.postfmly.com/@types/bun/-/bun-1.3.14.tgz", { "dependencies": { "bun-types": "1.3.14" } }, "sha512-h1hFqFVcvAvD9j9K7ZW7vd82aSA+rTdznZa+5bwvCwqSB1jmmfLcbIWhOLx1/+boy/xmjgCs/OMUL8hRJSmnPw=="],
 
-    "@types/node": ["@types/node@25.8.0", "https://npm.postfmly.com/@types/node/-/node-25.8.0.tgz", { "dependencies": { "undici-types": ">=7.24.0 <7.24.7" } }, "sha512-TCFSk8IZh+iLX1xtksoBVtdmgL+1IX0fC9BeU4QqFSuNdN/K+HUlhqOzEmSYYpZUVsLYcPqc9KX+60iDuninSQ=="],
+    "@types/node": ["@types/node@25.9.1", "https://npm.postfmly.com/@types/node/-/node-25.9.1.tgz", { "dependencies": { "undici-types": ">=7.24.0 <7.24.7" } }, "sha512-xfrlY7UD5rMJk3ZVJP8BNzS28J36YJg+xp+LPXV1TdWxr8uMH5A860QNxYDGQe/ylDSgjxE52Q9VnO7p75tJxg=="],
 
     "balanced-match": ["balanced-match@4.0.4", "https://npm.postfmly.com/balanced-match/-/balanced-match-4.0.4.tgz", {}, "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA=="],
 
@@ -50,11 +50,13 @@
 
     "bun-types": ["bun-types@1.3.14", "https://npm.postfmly.com/bun-types/-/bun-types-1.3.14.tgz", { "dependencies": { "@types/node": "*" } }, "sha512-4N0ig0fEomHt5R0KCFWjovxow98rIoRwKolrYdCcknNwMekCXRnWEUvgu5soYV8QXtVsrUD8B95MBOZGPvr6KQ=="],
 
-    "date-and-time": ["date-and-time@4.5.0", "https://npm.postfmly.com/date-and-time/-/date-and-time-4.5.0.tgz", {}, "sha512-IwPNy/ewmMPQYIo1jE4WlEFclKs0jNS+hlvZ9FxkaSx7kTH4QJ7jdlFIHcayVi7hvyTg1kvowX3WhnwzL0uIRg=="],
+    "dayjs": ["dayjs@1.11.20", "https://npm.postfmly.com/dayjs/-/dayjs-1.11.20.tgz", {}, "sha512-YbwwqR/uYpeoP4pu043q+LTDLFBLApUP6VxRihdfNTqu4ubqMlGDLd6ErXhEgsyvY0K6nCs7nggYumAN+9uEuQ=="],
 
     "glob": ["glob@13.0.6", "https://npm.postfmly.com/glob/-/glob-13.0.6.tgz", { "dependencies": { "minimatch": "^10.2.2", "minipass": "^7.1.3", "path-scurry": "^2.0.2" } }, "sha512-Wjlyrolmm8uDpm/ogGyXZXb1Z+Ca2B8NbJwqBVg0axK9GbBeoS7yGV6vjXnYdGm6X53iehEuxxbyiKp8QmN4Vw=="],
 
-    "lru-cache": ["lru-cache@11.3.6", "https://npm.postfmly.com/lru-cache/-/lru-cache-11.3.6.tgz", {}, "sha512-Gf/KoL3C/MlI7Bt0PGI9I+TeTC/I6r/csU58N4BSNc4lppLBeKsOdFYkK+dX0ABDUMJNfCHTyPpzwwO21Awd3A=="],
+    "globals": ["globals@17.6.0", "https://npm.postfmly.com/globals/-/globals-17.6.0.tgz", {}, "sha512-sepffkT8stwnIYbsMBpoCHJuJM5l98FUF2AnE07hfvE0m/qp3R586hw4jF4uadbhvg1ooIdzuu7CsfD2jzCaNA=="],
+
+    "lru-cache": ["lru-cache@11.5.0", "https://npm.postfmly.com/lru-cache/-/lru-cache-11.5.0.tgz", {}, "sha512-5YgH9UJd7wVb9hIouI2adWpgqrrICkt070Dnj8EUY1+B4B2P9eRLPAkAAo6NICA7CEhOIeBHl46u9zSNpNu7zA=="],
 
     "minimatch": ["minimatch@10.2.5", "https://npm.postfmly.com/minimatch/-/minimatch-10.2.5.tgz", { "dependencies": { "brace-expansion": "^5.0.5" } }, "sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg=="],
 

@@ -1,6 +1,8 @@
 # @postfmly/logger
 
-> - Info/error console logger
+#### Info/error console logger <!-- markdownlint-disable MD001 -->
+
+- Handles primitives and objects
 
 ---
 
@@ -14,7 +16,7 @@
 
 ---
 
-### Installation <!-- markdownlint-disable MD001 -->
+### Installation
 
 ```bash
 bun add @postfmly/logger
