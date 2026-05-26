@@ -45,7 +45,7 @@ error("error text", new Error("foo"))
 
 ```bash
 # bun
-./test.sh
+bun run test
 
 # browser
 bun run test:browser
