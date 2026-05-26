@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Info/error console logger",
   "keywords": [
     "info",
