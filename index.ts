@@ -33,7 +33,11 @@ const error = (...objs: unknown[]): void => {
 
   objs.forEach((obj: unknown): void => {
     if (obj && typeof obj === "object") {
-      console.error(red(`⤵︎ [object ${Array.isArray(obj) ? "Array" : "Object"}]:`))
+      if (obj instanceof Error) {
+        console.error(red(" ⤷"), `${obj.name}: ${obj.message}`)
+      }
+
+      console.info(red("⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${red(":")}`)
 
       handleObject(obj)
     } else {
@@ -55,7 +59,7 @@ const info = (...objs: unknown[]): void => {
   console.info(bgBlue(white(" INFO ")) + cyan(" [") + getTime() + cyan("] "))
   objs.forEach((obj: unknown): void => {
     if (obj && typeof obj === "object") {
-      console.info(cyan(`⤵︎ [object ${Array.isArray(obj) ? "Array" : "Object"}]:`))
+      console.info(cyan("⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${cyan(":")}`)
 
       handleObject(obj as object)
     } else {
