@@ -6,7 +6,6 @@
 
 ---
 
-![Biome](https://img.shields.io/badge/Biome-$_biome-informational?style=plastic&logo=biome) &nbsp;
 ![Bun](https://img.shields.io/badge/Bun-$_bun-informational?style=plastic&logo=bun)
 
 ![CodeQL](https://github.com/chump29/logger/workflows/CodeQL/badge.svg) &nbsp;

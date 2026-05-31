@@ -8,13 +8,9 @@ fi
 
 echo -e "📌 Packages:\n"
 
-_biome=^$(bun biome --version | cut -d " " -f 2)
-export _biome
-echo -e " • @biomejs/biome: $_biome"
-
-_version=$(bun --version)
-bun pm pkg set packageManager="bun@$_version" engines.bun="~$_version" > /dev/null 2>&1
-_bun=$(jq -r .engines.bun ../package.json)
+_bun=$(bun --version)
+bun pm pkg set packageManager="bun@$_bun" engines.bun="~$_bun" > /dev/null 2>&1
+_bun=~$_bun
 export _bun
 echo -e " • Bun: $_bun"
 

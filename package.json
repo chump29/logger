@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -31,7 +31,7 @@
     "build:rm": "rm -rf dist/build.d.ts dist/test",
     "clean": "rimraf bun.lock dist coverage",
     "clean:coverage": "rimraf coverage",
-    "lint": "bun audit && bun run lint:spell && bun run lint:biome",
+    "lint": "bun run lint:spell && bun run lint:biome",
     "lint:biome": "biome check --write --verbose .",
     "lint:spell": "cspell --verbose .",
     "prepare": "link-configs",
