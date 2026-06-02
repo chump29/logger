@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -48,12 +48,12 @@
   },
   "devDependencies": {
     "bun-scan": "^1.1.2",
-    "cspell": "^10.0.0",
+    "cspell": "^10.0.1",
     "lcov-total": "^2.1.1",
     "rimraf": "^6.1.3"
   },
   "peerDependencies": {
-    "@postfmly/config": "^1.3.9"
+    "@postfmly/config": "^1.3.13"
   },
   "packageManager": "bun@1.3.14",
   "engines": {
