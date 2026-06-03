@@ -47,7 +47,6 @@
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
-    "bun-scan": "^1.1.2",
     "cspell": "^10.0.1",
     "lcov-total": "^2.1.1",
     "rimraf": "^6.1.3"
