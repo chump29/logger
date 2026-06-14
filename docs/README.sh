@@ -8,6 +8,10 @@ _bun=~$_bun
 export _bun
 echo -e " • Bun: $_bun"
 
+_typescript=$(jq -r '.overrides.typescript // "❓"' ../package.json)
+export _typescript
+echo -e " • typescript: $_typescript"
+
 _coverage=-1
 if [ -f "../coverage/lcov.info" ]; then
   _coverage=$(bun run lcov-total ../coverage/lcov.info)

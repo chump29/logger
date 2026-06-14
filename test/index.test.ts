@@ -5,11 +5,9 @@ import { error, info } from "../index.ts"
 describe("index.ts", (): void => {
   const infoSpy: jest.Mock = spyOn(console, "info")
 
-  mock.module("browser-or-node", (): unknown => {
-    return {
-      isBrowser: true
-    }
-  })
+  mock.module("browser-or-node", (): unknown => ({
+    isBrowser: true
+  }))
 
   test("info fail", (): void => {
     info()

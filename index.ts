@@ -2,9 +2,7 @@ import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
 import { bgBlue, bgRed, cyan, red, white } from "picocolors"
 
-const getTime = (): string => {
-  return white(dayjs().format("MM/DD/YYYY @ HH:mm:ss.SSS"))
-}
+const getTime = (): string => white(dayjs().format("MM/DD/YYYY @ HH:mm:ss.SSS"))
 
 const handleObject = (obj: object): void => {
   if (isBrowser) {
@@ -25,13 +23,13 @@ const handleObject = (obj: object): void => {
  * @param {unknown[]} objs Data (primitives or objects) to display
  */
 const error = (...objs: unknown[]): void => {
-  if (!objs.length) {
+  if (objs.length === 0) {
     return
   }
 
   console.error(bgRed(white(" ERROR ")) + red(" [") + getTime() + red("] "))
 
-  objs.forEach((obj: unknown): void => {
+  for (const obj of objs) {
     if (obj && typeof obj === "object") {
       if (obj instanceof Error) {
         console.error(red(" ⤷"), `${obj.name}: ${obj.message}`)
@@ -43,7 +41,7 @@ const error = (...objs: unknown[]): void => {
     } else {
       console.error(red(" ⤷"), obj)
     }
-  })
+  }
 }
 
 /**
@@ -52,12 +50,12 @@ const error = (...objs: unknown[]): void => {
  * @param {unknown[]} objs Data (primitives or objects) to display
  */
 const info = (...objs: unknown[]): void => {
-  if (!objs.length) {
+  if (objs.length === 0) {
     return
   }
 
   console.info(bgBlue(white(" INFO ")) + cyan(" [") + getTime() + cyan("] "))
-  objs.forEach((obj: unknown): void => {
+  for (const obj of objs) {
     if (obj && typeof obj === "object") {
       console.info(cyan("⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${cyan(":")}`)
 
@@ -65,7 +63,7 @@ const info = (...objs: unknown[]): void => {
     } else {
       console.info(cyan(" ⤷"), obj)
     }
-  })
+  }
 }
 
 export { error, info }

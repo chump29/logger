@@ -27,7 +27,7 @@ await build({
     }
     return result.metafile
   })
-  .then(async (metafile: BuildMetafile | undefined): Promise<void> => {
+  .then((metafile: BuildMetafile | undefined): void => {
     if (metafile?.outputs) {
       for (const [path, output] of Object.entries(metafile.outputs)) {
         console.info(`${path}: ${output.bytes} bytes`)
