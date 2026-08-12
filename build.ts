@@ -5,20 +5,15 @@ import { type BuildMetafile, type BuildOutput, build } from "bun"
 import { error } from "./index.ts"
 import { devDependencies, peerDependencies } from "./package.json" with { type: "json" }
 
-const externalDependencies: string[] = [
-  ...Object.keys(devDependencies),
-  ...Object.keys(peerDependencies)
-]
+const externalDependencies: string[] = [...Object.keys(devDependencies), ...Object.keys(peerDependencies)]
 
 await build({
+  entrypoints: ["./index.ts"],
   external: externalDependencies,
   footer: "// ♡ ᓚᘏᗢ ♡",
   metafile: true,
   minify: true,
-  outdir: "./dist",
-  entrypoints: [
-    "./index.ts"
-  ]
+  outdir: "./dist"
 })
   .then((result: BuildOutput): BuildMetafile | undefined => {
     if (!result.success) {

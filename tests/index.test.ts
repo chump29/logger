@@ -26,10 +26,7 @@ describe("index.ts", (): void => {
       {
         is: "a"
       } as ITest,
-      [
-        "simple",
-        "test"
-      ] as string[],
+      ["simple", "test"] as string[],
       null
     )
 
@@ -47,14 +44,7 @@ describe("index.ts", (): void => {
   test("error pass", (): void => {
     const NUM_TIMES_ERROR: number = 4
 
-    error(
-      "test",
-      [
-        "me"
-      ],
-      new Error("This is a test"),
-      null
-    )
+    error("test", ["me"], new Error("This is a test"), null)
 
     expect(errorSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
   })

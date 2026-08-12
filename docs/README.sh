@@ -13,8 +13,8 @@ export _typescript
 echo -e " • typescript: $_typescript"
 
 _coverage=-1
-if [ -f "../coverage/lcov.info" ]; then
-  _coverage=$(bun run lcov-total ../coverage/lcov.info)
+if [ -f "../tests/coverage/lcov.info" ]; then
+  _coverage=$(bun run lcov-total ../tests/coverage/lcov.info)
 fi
 export _coverage
 echo -e "\n☂️  Coverage: $_coverage%"

@@ -2,7 +2,7 @@ import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
 import { bgBlue, bgRed, cyan, red, white } from "picocolors"
 
-const getTime = (): string => white(dayjs().format("MM/DD/YYYY @ HH:mm:ss.SSS"))
+const getTime = (): string => white(dayjs().format("MM/DD/YYYY [@] HH:mm:ss.SSS"))
 
 const handleObject = (obj: object): void => {
   if (isBrowser) {
@@ -12,6 +12,7 @@ const handleObject = (obj: object): void => {
   console.dir(obj, {
     depth: null
   })
+
   if (isBrowser) {
     console.groupEnd()
   }
