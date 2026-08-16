@@ -6,7 +6,7 @@
       "name": "@postfmly/logger",
       "dependencies": {
         "browser-or-node": "^3.0.0",
-        "dayjs": "^1.11.21",
+        "dayjs": "^1.11.22",
         "picocolors": "^1.1.1",
       },
       "devDependencies": {
@@ -16,7 +16,7 @@
         "rimraf": "^6.1.3",
       },
       "peerDependencies": {
-        "@postfmly/config": "^1.4.43",
+        "@postfmly/config": "^1.4.44",
       },
     },
   },
@@ -292,7 +292,7 @@
 
     "cve-lite-cli": ["cve-lite-cli@1.29.0", "https://npm.postfmly.com/cve-lite-cli/-/cve-lite-cli-1.29.0.tgz", { "dependencies": { "better-sqlite3": "^12.8.0", "fflate": "^0.8.2", "yaml": "^2.7.1", "yarn-lockfile": "^1.1.0" }, "bin": { "cve-lite": "dist/index.js" } }, "sha512-8ePDxSTKTjLI2xKBKAqndqb+HJ4PXAg3WwJtQbdcHl+kg1lS9Tl5kf0BSDOuoUdmn8sxGpmGBnFMPN/tAWXTbA=="],
 
-    "dayjs": ["dayjs@1.11.21", "https://npm.postfmly.com/dayjs/-/dayjs-1.11.21.tgz", {}, "sha512-98IT+HOahAisibz/yjKbzuOBwYcjJ7BCLPzARyHiyEBmRz4fatF+KPJszEHXsGYjUG234aH/cOjW1wwTbKUZlA=="],
+    "dayjs": ["dayjs@1.11.22", "https://npm.postfmly.com/dayjs/-/dayjs-1.11.22.tgz", {}, "sha512-1YRnxzt/AabP3GHxnaB9/b+ZScCKu5TeF+co+BWG+lnWVIwEcTFc1FVE0WLNmNO3sA6GGXL40i5qkHfbLzpwrg=="],
 
     "decompress-response": ["decompress-response@6.0.0", "https://npm.postfmly.com/decompress-response/-/decompress-response-6.0.0.tgz", { "dependencies": { "mimic-response": "^3.1.0" } }, "sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ=="],
 
