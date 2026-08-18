@@ -8,7 +8,10 @@ _bun=~$_bun
 export _bun
 echo -e " • Bun: $_bun"
 
-_coverage=-1
+echo -e "\n🧪 Running tests…"
+bun run --bun test:coverage
+
+_coverage=0
 if [ -f "../tests/coverage/lcov.info" ]; then
   _coverage=$(bun run lcov-total ../tests/coverage/lcov.info)
 fi

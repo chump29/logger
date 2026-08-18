@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -38,8 +38,10 @@
     "lint:ts": "bun run --bun tsc",
     "prepare": "bun run --bun husky",
     "scan": "bun run --bun cve-lite --check-overrides",
-    "test": "bun test --isolate --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
-    "test:browser": "bun run build:browser && bunx --bun serve --single --no-clipboard tests"
+    "test": "bun test --isolate --bail",
+    "test:browser": "bun run build:browser && bunx --bun serve --single --no-clipboard tests",
+    "test:coverage": "bun test --isolate --dots --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
+    "test:full": "bun test --isolate --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail"
   },
   "lint-staged": {
     "*": "bun run --bun cspell --no-must-find-files",

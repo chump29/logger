@@ -44,11 +44,17 @@ bun run lint
 ### Testing
 
 ```bash
-# bun
+# tests only
 bun run test
 
-# browser
+# for browser
 bun run test:browser
+
+# with coverage
+bun run test:coverage
+
+# with coverage, verbose
+bun run test:full
 ```
 
 ---
@@ -84,7 +90,6 @@ bun run test:browser
 - ###### *Includes building package*
 
 - ###### *Increments `patch` version in `package.json`*
-
 
 #### Unpublish:
 
