@@ -9,7 +9,7 @@ export _bun
 echo -e " • Bun: $_bun"
 
 echo -e "\n🧪 Running tests…"
-bun run --bun test:coverage
+bun run test:coverage
 
 _coverage=0
 if [ -f "../tests/coverage/lcov.info" ]; then
