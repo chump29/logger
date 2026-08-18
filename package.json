@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -27,7 +27,7 @@
     "build:build": "bun run --bun build.ts",
     "build:clean": "bun run --bun rimraf dist",
     "build:copy": "cp -f LICENSE package.json README.md dist/",
-    "build:dts": "bunx --bun tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false --skipLibCheck",
+    "build:dts": "bun run --bun tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false --skipLibCheck",
     "build:rm": "bun run --bun rimraf dist/build.d.ts dist/tests",
     "check": "bunx --bun depcheck --ignores=\"@types/*,bun,bun:*,lcov-total,rimraf\" || :",
     "clean": "bun run --bun rimraf bun.lock dist tests/coverage",
