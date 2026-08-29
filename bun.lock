@@ -1,68 +1,68 @@
 {
-  "lockfileVersion": 1,
+  "lockfileVersion": 2,
   "configVersion": 1,
   "workspaces": {
     "": {
       "name": "@postfmly/logger",
       "dependencies": {
         "browser-or-node": "^3.0.0",
-        "dayjs": "^1.11.22",
+        "dayjs": "^1.11.23",
         "picocolors": "^1.1.1",
       },
       "devDependencies": {
         "husky": "^9.1.7",
         "lcov-total": "^2.1.1",
-        "lint-staged": "^17.3.0",
+        "lint-staged": "^17.4.1",
         "rimraf": "^6.1.3",
       },
       "peerDependencies": {
-        "@postfmly/config": "^1.4.44",
+        "@postfmly/config": "^1.4.54",
       },
     },
   },
   "overrides": {
-    "@biomejs/biome": "2.5.8",
-    "@types/bun": "1.3.14",
-    "@types/node": "26.2.0",
-    "cspell": "10.0.1",
-    "cve-lite-cli": "1.29.0",
-    "globals": "17.10.0",
+    "@biomejs/biome": "2.5.11",
+    "@types/bun": "1.4.0",
+    "@types/node": "26.4.0",
+    "cspell": "10.1.1",
+    "cve-lite-cli": "1.31.0",
+    "globals": "17.11.0",
     "typescript": "7.0.2",
   },
   "packages": {
-    "@biomejs/biome": ["@biomejs/biome@2.5.8", "https://npm.postfmly.com/@biomejs/biome/-/biome-2.5.8.tgz", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.5.8", "@biomejs/cli-darwin-x64": "2.5.8", "@biomejs/cli-linux-arm64": "2.5.8", "@biomejs/cli-linux-arm64-musl": "2.5.8", "@biomejs/cli-linux-x64": "2.5.8", "@biomejs/cli-linux-x64-musl": "2.5.8", "@biomejs/cli-win32-arm64": "2.5.8", "@biomejs/cli-win32-x64": "2.5.8" }, "bin": { "biome": "bin/biome" } }, "sha512-aeAeeJB9fSDc7Gq+2GqpQxA0qBj6gj1k2R6L1cYqGePKP/baIq1WX8y6B+D+nRsO5ViQL22K/8IwbqERW0q1nw=="],
+    "@biomejs/biome": ["@biomejs/biome@2.5.11", "https://npm.postfmly.com/@biomejs/biome/-/biome-2.5.11.tgz", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "2.5.11", "@biomejs/cli-darwin-x64": "2.5.11", "@biomejs/cli-linux-arm64": "2.5.11", "@biomejs/cli-linux-arm64-musl": "2.5.11", "@biomejs/cli-linux-x64": "2.5.11", "@biomejs/cli-linux-x64-musl": "2.5.11", "@biomejs/cli-win32-arm64": "2.5.11", "@biomejs/cli-win32-x64": "2.5.11" }, "bin": { "biome": "bin/biome" } }, "sha512-Tj0dnkLPdW0ASjHfj2D/ZkkvPU2wrFmnE1jWTD2xzV1ycapV1DutbYXk4NDnR3rYTi1ZCbNFD4G2gRMEY65WaA=="],
 
-    "@biomejs/cli-darwin-arm64": ["@biomejs/cli-darwin-arm64@2.5.8", "https://npm.postfmly.com/@biomejs/cli-darwin-arm64/-/cli-darwin-arm64-2.5.8.tgz", { "os": "darwin", "cpu": "arm64" }, "sha512-mk1QON9PHllvvLN5gU3f4rMxeh4syK5p9OvKyWH6/W8ueh04uaC8TUXXByhGufWf/y5mQc03ZLM45zU+cmqMjA=="],
+    "@biomejs/cli-darwin-arm64": ["@biomejs/cli-darwin-arm64@2.5.11", "https://npm.postfmly.com/@biomejs/cli-darwin-arm64/-/cli-darwin-arm64-2.5.11.tgz", { "os": "darwin", "cpu": "arm64" }, "sha512-6SGZxoKbXvUjMn1t6A98HqWISPnGNbYs0R/Rt2JarmXBSev+lva4QxUMWEBX9lX1Wo1XTJ78uk5xVDtG58SRZg=="],
 
-    "@biomejs/cli-darwin-x64": ["@biomejs/cli-darwin-x64@2.5.8", "https://npm.postfmly.com/@biomejs/cli-darwin-x64/-/cli-darwin-x64-2.5.8.tgz", { "os": "darwin", "cpu": "x64" }, "sha512-bsGwFMBNyHPyiLSsQcZJxdoRrg1V4JL+d7wEsvUBczlP9U9lwM+7mzQHxI4o1mhBsTmdOBbAb6fHU3Z3snN45w=="],
+    "@biomejs/cli-darwin-x64": ["@biomejs/cli-darwin-x64@2.5.11", "https://npm.postfmly.com/@biomejs/cli-darwin-x64/-/cli-darwin-x64-2.5.11.tgz", { "os": "darwin", "cpu": "x64" }, "sha512-nYkXY7tLBEgnGbYapDKAyKzgt44ZEyG+AKalvTXtCWKYgepI9dw327q+cVgedxm+Udi1ZzHKUyZrIusHi/KQbw=="],
 
-    "@biomejs/cli-linux-arm64": ["@biomejs/cli-linux-arm64@2.5.8", "https://npm.postfmly.com/@biomejs/cli-linux-arm64/-/cli-linux-arm64-2.5.8.tgz", { "os": "linux", "cpu": "arm64" }, "sha512-XmFiA0WPYFC+uiUDC8WRFzAIH9bo7vwQLav38Uoq4ETC+T/+uBi0TsYGJECkugY3r8USl3jc+Ae2/irAF6F2lQ=="],
+    "@biomejs/cli-linux-arm64": ["@biomejs/cli-linux-arm64@2.5.11", "https://npm.postfmly.com/@biomejs/cli-linux-arm64/-/cli-linux-arm64-2.5.11.tgz", { "os": "linux", "cpu": "arm64" }, "sha512-3PVLSTD9RR73rvVPt5G3T1gc+ycggWEGfTD7RvzzbtcDPD27NxgxBbAFfpm7DXJKW6VLHWE1lLMGvFt2Qxjcow=="],
 
-    "@biomejs/cli-linux-arm64-musl": ["@biomejs/cli-linux-arm64-musl@2.5.8", "https://npm.postfmly.com/@biomejs/cli-linux-arm64-musl/-/cli-linux-arm64-musl-2.5.8.tgz", { "os": "linux", "cpu": "arm64" }, "sha512-VcJNbstduTHx83NGAdhp78/JOcP45BZHXL7yNsfI1uGzdUgegAz2s+mSoT7wK6PBNzLoqG0zDOXaz/RQYVtSiw=="],
+    "@biomejs/cli-linux-arm64-musl": ["@biomejs/cli-linux-arm64-musl@2.5.11", "https://npm.postfmly.com/@biomejs/cli-linux-arm64-musl/-/cli-linux-arm64-musl-2.5.11.tgz", { "os": "linux", "cpu": "arm64" }, "sha512-qhyZUMyCbWYFV2bAwRNVvfMVZ+hv7WYl6mossGrxC+uiQQXhvsuWWU8zz6jYX0mChZd9MgQZbm4vozTmG/5iGw=="],
 
-    "@biomejs/cli-linux-x64": ["@biomejs/cli-linux-x64@2.5.8", "https://npm.postfmly.com/@biomejs/cli-linux-x64/-/cli-linux-x64-2.5.8.tgz", { "os": "linux", "cpu": "x64" }, "sha512-S5wcm9OBDvLHodD4PUaN488hCpco9QD/9ZxuYJiw4euWtr/oQvLR72z2ixItH8Wd5BCm6FZaeb+YNvOoM1xHtQ=="],
+    "@biomejs/cli-linux-x64": ["@biomejs/cli-linux-x64@2.5.11", "https://npm.postfmly.com/@biomejs/cli-linux-x64/-/cli-linux-x64-2.5.11.tgz", { "os": "linux", "cpu": "x64" }, "sha512-JOytptlsgM33B2MMFUg8iBrb4IKpbD5JnJrSeYiaFEeAj4vuXx0iQSQZ4qK7sqyMtfjZxxPdNdMZZVL4y/mFyA=="],
 
-    "@biomejs/cli-linux-x64-musl": ["@biomejs/cli-linux-x64-musl@2.5.8", "https://npm.postfmly.com/@biomejs/cli-linux-x64-musl/-/cli-linux-x64-musl-2.5.8.tgz", { "os": "linux", "cpu": "x64" }, "sha512-kKmiyokeISRGq2FLwvr+TzsgBusfxaZ0FZNLcOYOpCK/78tRrEjeEBLvq3xLZMpqbANgJdRPI7vZX8ZL37u9/w=="],
+    "@biomejs/cli-linux-x64-musl": ["@biomejs/cli-linux-x64-musl@2.5.11", "https://npm.postfmly.com/@biomejs/cli-linux-x64-musl/-/cli-linux-x64-musl-2.5.11.tgz", { "os": "linux", "cpu": "x64" }, "sha512-oRRlrchG5EfrEL/EmtT1qUjSNHk3/5LGeZhQqADBBAJF1b1ET6964xEKe7aGlGARzDfza8H/seEsFJl7S6Ql9w=="],
 
-    "@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@2.5.8", "https://npm.postfmly.com/@biomejs/cli-win32-arm64/-/cli-win32-arm64-2.5.8.tgz", { "os": "win32", "cpu": "arm64" }, "sha512-nILH0mzm3Hi3iEdd7o7GpB8kBR/mSQwfQG/tyBqyNrY2GFtcgwfV9nV8xLmbtUpMNY/Oi0Ml1XgfR4flOdq+AA=="],
+    "@biomejs/cli-win32-arm64": ["@biomejs/cli-win32-arm64@2.5.11", "https://npm.postfmly.com/@biomejs/cli-win32-arm64/-/cli-win32-arm64-2.5.11.tgz", { "os": "win32", "cpu": "arm64" }, "sha512-e49E6K9hzH/ohJNx8Y26mY8HaV4I4ZViIeoqhKsmoXLKHhQnMeBAVqCgsGf2Wa3lXlS7RkporDXMHHWkzvZzFw=="],
 
-    "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.5.8", "https://npm.postfmly.com/@biomejs/cli-win32-x64/-/cli-win32-x64-2.5.8.tgz", { "os": "win32", "cpu": "x64" }, "sha512-I2czzXTY61f3nFJxXoMDq80t7MivxDEnCjE+8sDKoFfcKMaoQdkqhIFQ3KyY0XLzeSpUBYeNAXgD+iOV/BU0VA=="],
+    "@biomejs/cli-win32-x64": ["@biomejs/cli-win32-x64@2.5.11", "https://npm.postfmly.com/@biomejs/cli-win32-x64/-/cli-win32-x64-2.5.11.tgz", { "os": "win32", "cpu": "x64" }, "sha512-QSQr/KjOgXA7OzXJUWS+oguKyAZ3Q0l/lnlDGbu397eKo83atuWUjBPJrsqbKNF6CARGw8XXJLGzpHC8Ryhd4Q=="],
 
-    "@cspell/cspell-bundled-dicts": ["@cspell/cspell-bundled-dicts@10.0.1", "https://npm.postfmly.com/@cspell/cspell-bundled-dicts/-/cspell-bundled-dicts-10.0.1.tgz", { "dependencies": { "@cspell/dict-ada": "^4.1.1", "@cspell/dict-al": "^1.1.1", "@cspell/dict-aws": "^4.0.17", "@cspell/dict-bash": "^4.2.2", "@cspell/dict-companies": "^3.2.11", "@cspell/dict-cpp": "^7.0.2", "@cspell/dict-cryptocurrencies": "^5.0.5", "@cspell/dict-csharp": "^4.0.8", "@cspell/dict-css": "^4.1.1", "@cspell/dict-dart": "^2.3.2", "@cspell/dict-data-science": "^2.0.13", "@cspell/dict-django": "^4.1.6", "@cspell/dict-docker": "^1.1.17", "@cspell/dict-dotnet": "^5.0.13", "@cspell/dict-elixir": "^4.0.8", "@cspell/dict-en-common-misspellings": "^2.1.12", "@cspell/dict-en-gb-mit": "^3.1.22", "@cspell/dict-en_us": "^4.4.33", "@cspell/dict-filetypes": "^3.0.18", "@cspell/dict-flutter": "^1.1.1", "@cspell/dict-fonts": "^4.0.6", "@cspell/dict-fsharp": "^1.1.1", "@cspell/dict-fullstack": "^3.2.9", "@cspell/dict-gaming-terms": "^1.1.2", "@cspell/dict-git": "^3.1.0", "@cspell/dict-golang": "^6.0.26", "@cspell/dict-google": "^1.0.9", "@cspell/dict-haskell": "^4.0.6", "@cspell/dict-html": "^4.0.15", "@cspell/dict-html-symbol-entities": "^4.0.5", "@cspell/dict-java": "^5.0.12", "@cspell/dict-julia": "^1.1.1", "@cspell/dict-k8s": "^1.0.12", "@cspell/dict-kotlin": "^1.1.1", "@cspell/dict-latex": "^5.1.0", "@cspell/dict-lorem-ipsum": "^4.0.5", "@cspell/dict-lua": "^4.0.8", "@cspell/dict-makefile": "^1.0.5", "@cspell/dict-markdown": "^2.0.16", "@cspell/dict-monkeyc": "^1.0.12", "@cspell/dict-node": "^5.0.9", "@cspell/dict-npm": "^5.2.38", "@cspell/dict-php": "^4.1.1", "@cspell/dict-powershell": "^5.0.15", "@cspell/dict-public-licenses": "^2.0.16", "@cspell/dict-python": "^4.2.26", "@cspell/dict-r": "^2.1.1", "@cspell/dict-ruby": "^5.1.1", "@cspell/dict-rust": "^4.1.2", "@cspell/dict-scala": "^5.0.9", "@cspell/dict-shell": "^1.1.2", "@cspell/dict-software-terms": "^5.2.2", "@cspell/dict-sql": "^2.2.1", "@cspell/dict-svelte": "^1.0.7", "@cspell/dict-swift": "^2.0.6", "@cspell/dict-terraform": "^1.1.3", "@cspell/dict-typescript": "^3.2.3", "@cspell/dict-vue": "^3.0.5", "@cspell/dict-zig": "^1.0.0" } }, "sha512-WvkSDNX4Uyyj/ZgbPO6L38iFNMfK1EqsH1FteRiI2qLz6QZMXRFrIt12OqiWIplzZDDaVpBH9FCJOPJll0fjCQ=="],
+    "@cspell/cspell-bundled-dicts": ["@cspell/cspell-bundled-dicts@10.1.1", "https://npm.postfmly.com/@cspell/cspell-bundled-dicts/-/cspell-bundled-dicts-10.1.1.tgz", { "dependencies": { "@cspell/dict-ada": "^4.1.1", "@cspell/dict-al": "^1.1.1", "@cspell/dict-aws": "^4.0.17", "@cspell/dict-bash": "^4.2.3", "@cspell/dict-companies": "^3.2.12", "@cspell/dict-cpp": "^7.1.0", "@cspell/dict-cryptocurrencies": "^5.0.5", "@cspell/dict-csharp": "^4.0.8", "@cspell/dict-css": "^4.1.2", "@cspell/dict-dart": "^2.3.2", "@cspell/dict-data-science": "^2.0.16", "@cspell/dict-django": "^4.1.6", "@cspell/dict-docker": "^1.1.17", "@cspell/dict-dotnet": "^5.0.13", "@cspell/dict-elixir": "^4.0.8", "@cspell/dict-en-common-misspellings": "^2.2.0", "@cspell/dict-en-gb-mit": "^3.1.25", "@cspell/dict-en_us": "^4.4.36", "@cspell/dict-filetypes": "^3.0.18", "@cspell/dict-flutter": "^1.1.1", "@cspell/dict-fonts": "^4.0.6", "@cspell/dict-fsharp": "^1.1.1", "@cspell/dict-fullstack": "^3.2.9", "@cspell/dict-gaming-terms": "^1.1.2", "@cspell/dict-git": "^3.1.0", "@cspell/dict-golang": "^6.0.27", "@cspell/dict-google": "^1.0.9", "@cspell/dict-haskell": "^4.0.6", "@cspell/dict-html": "^4.0.16", "@cspell/dict-html-symbol-entities": "^4.0.5", "@cspell/dict-java": "^5.0.12", "@cspell/dict-julia": "^1.1.1", "@cspell/dict-k8s": "^1.0.13", "@cspell/dict-kotlin": "^1.1.1", "@cspell/dict-latex": "^5.1.0", "@cspell/dict-lorem-ipsum": "^4.0.5", "@cspell/dict-lua": "^4.0.8", "@cspell/dict-makefile": "^1.0.5", "@cspell/dict-markdown": "^2.0.18", "@cspell/dict-monkeyc": "^1.1.0", "@cspell/dict-node": "^5.0.9", "@cspell/dict-npm": "^5.2.47", "@cspell/dict-php": "^4.1.1", "@cspell/dict-powershell": "^5.0.15", "@cspell/dict-public-licenses": "^2.0.16", "@cspell/dict-python": "^4.4.0", "@cspell/dict-r": "^2.1.1", "@cspell/dict-ruby": "^5.1.2", "@cspell/dict-rust": "^4.1.2", "@cspell/dict-scala": "^5.0.9", "@cspell/dict-shell": "^1.2.0", "@cspell/dict-software-terms": "^5.4.1", "@cspell/dict-sql": "^2.2.1", "@cspell/dict-svelte": "^1.0.7", "@cspell/dict-swift": "^2.0.6", "@cspell/dict-terraform": "^1.1.4", "@cspell/dict-typescript": "^3.2.3", "@cspell/dict-vue": "^3.0.5", "@cspell/dict-zig": "^1.0.0" } }, "sha512-EvPFPWwEPbPn2pIAD4D6PRRFbuM5OCiYfY0GhmpQyWWteCwR4gRmRs06UOWqfSRKHYBL/rUqcr3OAfiF5ctAjw=="],
 
-    "@cspell/cspell-json-reporter": ["@cspell/cspell-json-reporter@10.0.1", "https://npm.postfmly.com/@cspell/cspell-json-reporter/-/cspell-json-reporter-10.0.1.tgz", { "dependencies": { "@cspell/cspell-types": "10.0.1" } }, "sha512-/nes1RGILec3WCBcoMOd0byNTBtnJuPaVz/+ZzqYkLtY7x58VMcBG5kyP6hPyN8cIwjRADE/SR43gwdXuqk/FA=="],
+    "@cspell/cspell-json-reporter": ["@cspell/cspell-json-reporter@10.1.1", "https://npm.postfmly.com/@cspell/cspell-json-reporter/-/cspell-json-reporter-10.1.1.tgz", { "dependencies": { "@cspell/cspell-types": "10.1.1" } }, "sha512-6makYERzgDCBGeOG7jSgZBOWxJKxBV6k0UQ60xDBZNrccACP45q8zO9YIXdHAYLmHB52l3Iz2vifeG7zhue7jA=="],
 
-    "@cspell/cspell-performance-monitor": ["@cspell/cspell-performance-monitor@10.0.1", "https://npm.postfmly.com/@cspell/cspell-performance-monitor/-/cspell-performance-monitor-10.0.1.tgz", {}, "sha512-9tVcHXwRnbazUv4WSG0h3MqV4+LgmLNgSALAQUflPPW0EMxTf7C4Dmv9cgxJyCEQrdnVKCr58nPPaahhz9LJUg=="],
+    "@cspell/cspell-performance-monitor": ["@cspell/cspell-performance-monitor@10.1.1", "https://npm.postfmly.com/@cspell/cspell-performance-monitor/-/cspell-performance-monitor-10.1.1.tgz", {}, "sha512-M3Bq+K0jmbnAE2dWB8vG/TljagcKWuILTpcf6sIMB/jTaT7QH9FyzVp0Q6srlN3GEdSBwFBqrfWCorkjRUd0cQ=="],
 
-    "@cspell/cspell-pipe": ["@cspell/cspell-pipe@10.0.1", "https://npm.postfmly.com/@cspell/cspell-pipe/-/cspell-pipe-10.0.1.tgz", {}, "sha512-HPeXMD9AZ3V/qPkvQaPcak+C7cJ2z7JTHN8smd6J8L2aThLRky2cHc2OyeaHPSHB7WA47b4z2n5u5nawZhv5VQ=="],
+    "@cspell/cspell-pipe": ["@cspell/cspell-pipe@10.1.1", "https://npm.postfmly.com/@cspell/cspell-pipe/-/cspell-pipe-10.1.1.tgz", {}, "sha512-WOuL9zdcl38b9P5Kpco3c1vg5v82bSWZ7LVeARbyrOmW60HxS8uP4nkbCGeU6pINvJCs0JUQxEZCRMHuEF0dfQ=="],
 
-    "@cspell/cspell-resolver": ["@cspell/cspell-resolver@10.0.1", "https://npm.postfmly.com/@cspell/cspell-resolver/-/cspell-resolver-10.0.1.tgz", { "dependencies": { "global-directory": "^5.0.0" } }, "sha512-PIzkZHD1fGUQx1XteK2d1iQ0Mzq/maYcoB4jkvAiiR6WqP3MWYNKFdI9z+R5pOq5KgMfW+5Ig1q0oSR6h8irlA=="],
+    "@cspell/cspell-resolver": ["@cspell/cspell-resolver@10.1.1", "https://npm.postfmly.com/@cspell/cspell-resolver/-/cspell-resolver-10.1.1.tgz", { "dependencies": { "global-directory": "^5.0.0" } }, "sha512-bbsykc5c7dDdPTDFdsY0GKwXlflDDaTUycAegziFLCcp8b/q1txQmqBxx95ok1pjpU10sWxiJztZZRayFcM5sg=="],
 
-    "@cspell/cspell-service-bus": ["@cspell/cspell-service-bus@10.0.1", "https://npm.postfmly.com/@cspell/cspell-service-bus/-/cspell-service-bus-10.0.1.tgz", {}, "sha512-y6NcIGP2IdXaBL4PVH8vxsr7K27wzz3Ech87UtUtrDSXAiVEOvXgAIknEOUVp59rTlUE8Rn4IRURC6f/hgMyfw=="],
+    "@cspell/cspell-service-bus": ["@cspell/cspell-service-bus@10.1.1", "https://npm.postfmly.com/@cspell/cspell-service-bus/-/cspell-service-bus-10.1.1.tgz", {}, "sha512-Z3BUsVllqyAoJSGXcyFp0hXtBVKEfrxVcSy3UPoSoLW9gZZjXmFwOorhga3+fMseC9VRK3L6mKSccn9YGAjsnA=="],
 
-    "@cspell/cspell-types": ["@cspell/cspell-types@10.0.1", "https://npm.postfmly.com/@cspell/cspell-types/-/cspell-types-10.0.1.tgz", {}, "sha512-kLgLShnWADDVreKC63pBrWkcvxgZzFIfO34Jhx/SWfuOIA3cD8AXT+HjyuLfoGJ7mUb58hv2kUziKzEy4INb1w=="],
+    "@cspell/cspell-types": ["@cspell/cspell-types@10.1.1", "https://npm.postfmly.com/@cspell/cspell-types/-/cspell-types-10.1.1.tgz", {}, "sha512-lsc+/pazJQ47Zy7qyuFiQRZzco+kBSUmAtCzbmT96pFpAVxR+b4A8qRBoTdiq4OXBRXRT+CqWMNynSiwQJWM6g=="],
 
-    "@cspell/cspell-worker": ["@cspell/cspell-worker@10.0.1", "https://npm.postfmly.com/@cspell/cspell-worker/-/cspell-worker-10.0.1.tgz", { "dependencies": { "cspell-lib": "10.0.1" } }, "sha512-L2bJerfuYOls2wEknm8FmynLtj/G7O4UqX9I/HznRggEW6i2yZIxagDetpVDNowpyavNHJ3SJtUFiyMiZc16Sw=="],
+    "@cspell/cspell-worker": ["@cspell/cspell-worker@10.1.1", "https://npm.postfmly.com/@cspell/cspell-worker/-/cspell-worker-10.1.1.tgz", { "dependencies": { "cspell-lib": "10.1.1" } }, "sha512-X9Ehif6c/9BRIODBjWMr0paHQrY3Jw7q0FWeSdxPZrnKhgJ+cX4vtvqlSD1dGXMV2/fGh10p1HznuDhNlQ4tjg=="],
 
     "@cspell/dict-ada": ["@cspell/dict-ada@4.1.1", "https://npm.postfmly.com/@cspell/dict-ada/-/dict-ada-4.1.1.tgz", {}, "sha512-E+0YW9RhZod/9Qy2gxfNZiHJjCYFlCdI69br1eviQQWB8yOTJX0JHXLs79kOYhSW0kINPVUdvddEBe6Lu6CjGQ=="],
 
@@ -96,9 +96,9 @@
 
     "@cspell/dict-en-common-misspellings": ["@cspell/dict-en-common-misspellings@2.2.0", "https://npm.postfmly.com/@cspell/dict-en-common-misspellings/-/dict-en-common-misspellings-2.2.0.tgz", {}, "sha512-5PmCHv+AhY0LVNo3bE1FdRKMmw1esKj83GPwLymnVPYNtlI2Jf6y27EjC0azg4zny5keWmku0GQiMf55Fi+qeA=="],
 
-    "@cspell/dict-en-gb-mit": ["@cspell/dict-en-gb-mit@3.1.25", "https://npm.postfmly.com/@cspell/dict-en-gb-mit/-/dict-en-gb-mit-3.1.25.tgz", {}, "sha512-zGODptk24CMrXi49ieG2SUm94CKxEsVF0dYNF+1ZYH0MSsQDZ/PKDlrrbvtBqSupKdPSj0Z9sjOmMNfHHW9ZSg=="],
+    "@cspell/dict-en-gb-mit": ["@cspell/dict-en-gb-mit@3.1.26", "https://npm.postfmly.com/@cspell/dict-en-gb-mit/-/dict-en-gb-mit-3.1.26.tgz", {}, "sha512-F9Y/45+1oIPzfL/pyWLp4kzX+vddHPAYpIpIF+45bdc65AebeEiQHKzSmKgGGTd3qbQc3fATw2kAFdLryiQpjQ=="],
 
-    "@cspell/dict-en_us": ["@cspell/dict-en_us@4.4.36", "https://npm.postfmly.com/@cspell/dict-en_us/-/dict-en_us-4.4.36.tgz", {}, "sha512-2yOhI/+7d1DbfvMljGW4jw8pLqDEsVmnvUXBOCFXtLU2BWgQkrqOJDCNseYjEiEbTp0OtdrWEWWPFSP1TNugQw=="],
+    "@cspell/dict-en_us": ["@cspell/dict-en_us@4.4.37", "https://npm.postfmly.com/@cspell/dict-en_us/-/dict-en_us-4.4.37.tgz", {}, "sha512-rMKyPrk2SKmDU+Bj0U0ixsv4Du93oijwovc8XlUin0zwKOJZb0/PFG5Df4P8CrM2CrLeovpaFvhoI98DigxBLw=="],
 
     "@cspell/dict-filetypes": ["@cspell/dict-filetypes@3.0.18", "https://npm.postfmly.com/@cspell/dict-filetypes/-/dict-filetypes-3.0.18.tgz", {}, "sha512-yU7RKD/x1IWmDLzWeiItMwgV+6bUcU/af23uS0+uGiFUbsY1qWV/D4rxlAAO6Z7no3J2z8aZOkYIOvUrJq0Rcw=="],
 
@@ -114,13 +114,13 @@
 
     "@cspell/dict-git": ["@cspell/dict-git@3.1.0", "https://npm.postfmly.com/@cspell/dict-git/-/dict-git-3.1.0.tgz", {}, "sha512-KEt9zGkxqGy2q1nwH4CbyqTSv5nadpn8BAlDnzlRcnL0Xb3LX9xTgSGShKvzb0bw35lHoYyLWN2ZKAqbC4pgGQ=="],
 
-    "@cspell/dict-golang": ["@cspell/dict-golang@6.0.26", "https://npm.postfmly.com/@cspell/dict-golang/-/dict-golang-6.0.26.tgz", {}, "sha512-YKA7Xm5KeOd14v5SQ4ll6afe9VSy3a2DWM7L9uBq4u3lXToRBQ1W5PRa+/Q9udd+DTURyVVnQ+7b9cnOlNxaRg=="],
+    "@cspell/dict-golang": ["@cspell/dict-golang@6.0.27", "https://npm.postfmly.com/@cspell/dict-golang/-/dict-golang-6.0.27.tgz", {}, "sha512-rRDb2JL8EefaezHGTEclKXCs4eMOS0q/datk94Lm7KQOhlGlzS9FDVZiR1/guh0o+iJCmejQuf5NR2FQeQSWsg=="],
 
     "@cspell/dict-google": ["@cspell/dict-google@1.0.9", "https://npm.postfmly.com/@cspell/dict-google/-/dict-google-1.0.9.tgz", {}, "sha512-biL65POqialY0i4g6crj7pR6JnBkbsPovB2WDYkj3H4TuC/QXv7Pu5pdPxeUJA6TSCHI7T5twsO4VSVyRxD9CA=="],
 
     "@cspell/dict-haskell": ["@cspell/dict-haskell@4.0.6", "https://npm.postfmly.com/@cspell/dict-haskell/-/dict-haskell-4.0.6.tgz", {}, "sha512-ib8SA5qgftExpYNjWhpYIgvDsZ/0wvKKxSP+kuSkkak520iPvTJumEpIE+qPcmJQo4NzdKMN8nEfaeci4OcFAQ=="],
 
-    "@cspell/dict-html": ["@cspell/dict-html@4.0.15", "https://npm.postfmly.com/@cspell/dict-html/-/dict-html-4.0.15.tgz", {}, "sha512-GJYnYKoD9fmo2OI0aySEGZOjThnx3upSUvV7mmqUu8oG+mGgzqm82P/f7OqsuvTaInZZwZbo+PwJQd/yHcyFIw=="],
+    "@cspell/dict-html": ["@cspell/dict-html@4.0.16", "https://npm.postfmly.com/@cspell/dict-html/-/dict-html-4.0.16.tgz", {}, "sha512-9B6/Cpb5YVcYgsEAlKudun1yd4ONllYS/ZibKLYea2apPR+l2vQdARnPrP9kTqa7NUNfRKl7m9Fb6k9rjimnow=="],
 
     "@cspell/dict-html-symbol-entities": ["@cspell/dict-html-symbol-entities@4.0.5", "https://npm.postfmly.com/@cspell/dict-html-symbol-entities/-/dict-html-symbol-entities-4.0.5.tgz", {}, "sha512-429alTD4cE0FIwpMucvSN35Ld87HCyuM8mF731KU5Rm4Je2SG6hmVx7nkBsLyrmH3sQukTcr1GaiZsiEg8svPA=="],
 
@@ -140,13 +140,13 @@
 
     "@cspell/dict-makefile": ["@cspell/dict-makefile@1.0.5", "https://npm.postfmly.com/@cspell/dict-makefile/-/dict-makefile-1.0.5.tgz", {}, "sha512-4vrVt7bGiK8Rx98tfRbYo42Xo2IstJkAF4tLLDMNQLkQ86msDlYSKG1ZCk8Abg+EdNcFAjNhXIiNO+w4KflGAQ=="],
 
-    "@cspell/dict-markdown": ["@cspell/dict-markdown@2.0.17", "https://npm.postfmly.com/@cspell/dict-markdown/-/dict-markdown-2.0.17.tgz", { "peerDependencies": { "@cspell/dict-css": "^4.1.2", "@cspell/dict-html": "^4.0.15", "@cspell/dict-html-symbol-entities": "^4.0.5", "@cspell/dict-typescript": "^3.2.3" } }, "sha512-H8bAxih6U8NOnSPL7R8My+tqjaB4tmnJTjERuz4zYqmf+cH+5xshX3UVgKlwWFcyjsYfv/zEDuRdMctQv1q6HQ=="],
+    "@cspell/dict-markdown": ["@cspell/dict-markdown@2.0.18", "https://npm.postfmly.com/@cspell/dict-markdown/-/dict-markdown-2.0.18.tgz", { "peerDependencies": { "@cspell/dict-css": "^4.1.2", "@cspell/dict-html": "^4.0.16", "@cspell/dict-html-symbol-entities": "^4.0.5", "@cspell/dict-typescript": "^3.2.3" } }, "sha512-KLRSwVrwKDz4n7bl2XQjzvaBZbGgx5QKkP5Ok1b24xaO3TpXsLhAbAn1mItvFlI2tF6Rkt83iYjQcYppywuf5Q=="],
 
     "@cspell/dict-monkeyc": ["@cspell/dict-monkeyc@1.1.0", "https://npm.postfmly.com/@cspell/dict-monkeyc/-/dict-monkeyc-1.1.0.tgz", {}, "sha512-mc/hgvSy/emOIYtc8kuVEaLUlnaERunfAubfJ5plUXq6s0A69bcukJzUzSt9C0UTCwS28641ILRPv80m3L9QbA=="],
 
     "@cspell/dict-node": ["@cspell/dict-node@5.0.9", "https://npm.postfmly.com/@cspell/dict-node/-/dict-node-5.0.9.tgz", {}, "sha512-hO+ga+uYZ/WA4OtiMEyKt5rDUlUyu3nXMf8KVEeqq2msYvAPdldKBGH7lGONg6R/rPhv53Rb+0Y1SLdoK1+7wQ=="],
 
-    "@cspell/dict-npm": ["@cspell/dict-npm@5.2.45", "https://npm.postfmly.com/@cspell/dict-npm/-/dict-npm-5.2.45.tgz", {}, "sha512-BXUmMMspl+AhPIk/ZOjxlNu5k1yCRAzSMzdNPYM+2vaBL8ffev7ZFfOyBCDk8kgcpsHotz8/3fLNX+xwWaDR2w=="],
+    "@cspell/dict-npm": ["@cspell/dict-npm@5.2.47", "https://npm.postfmly.com/@cspell/dict-npm/-/dict-npm-5.2.47.tgz", {}, "sha512-r5ePbkmRtpMwiv+MHd6be1xIRLuXoEwaSLIZLu3mY+qtPVo0LUj/kVl4YeIxHONiwyef75zqS3gnT+s5UF7diQ=="],
 
     "@cspell/dict-php": ["@cspell/dict-php@4.1.1", "https://npm.postfmly.com/@cspell/dict-php/-/dict-php-4.1.1.tgz", {}, "sha512-EXelI+4AftmdIGtA8HL8kr4WlUE11OqCSVlnIgZekmTkEGSZdYnkFdiJ5IANSALtlQ1mghKjz+OFqVs6yowgWA=="],
 
@@ -154,11 +154,11 @@
 
     "@cspell/dict-public-licenses": ["@cspell/dict-public-licenses@2.0.16", "https://npm.postfmly.com/@cspell/dict-public-licenses/-/dict-public-licenses-2.0.16.tgz", {}, "sha512-EQRrPvEOmwhwWezV+W7LjXbIBjiy6y/shrET6Qcpnk3XANTzfvWflf9PnJ5kId/oKWvihFy0za0AV1JHd03pSQ=="],
 
-    "@cspell/dict-python": ["@cspell/dict-python@4.3.0", "https://npm.postfmly.com/@cspell/dict-python/-/dict-python-4.3.0.tgz", { "dependencies": { "@cspell/dict-data-science": "^2.0.16" } }, "sha512-afVcbsCOYtpdvu8I4ANiIXVcxqxzrno+oEuObNx9hwpvEmf/AbXQBk9CMjFR9QZllcfnOfpjCSXgGuTna5hKQA=="],
+    "@cspell/dict-python": ["@cspell/dict-python@4.5.0", "https://npm.postfmly.com/@cspell/dict-python/-/dict-python-4.5.0.tgz", { "dependencies": { "@cspell/dict-data-science": "^2.0.16" } }, "sha512-O1lSuFXoX8p+4hvJMbqvg3blbn0Zx8LHqdPQSNaOxFZGf7hmq6pc8sfta+98E7Q/WtDooAnU3XpBxBXcn0r94g=="],
 
     "@cspell/dict-r": ["@cspell/dict-r@2.1.1", "https://npm.postfmly.com/@cspell/dict-r/-/dict-r-2.1.1.tgz", {}, "sha512-71Ka+yKfG4ZHEMEmDxc6+blFkeTTvgKbKAbwiwQAuKl3zpqs1Y0vUtwW2N4b3LgmSPhV3ODVY0y4m5ofqDuKMw=="],
 
-    "@cspell/dict-ruby": ["@cspell/dict-ruby@5.1.1", "https://npm.postfmly.com/@cspell/dict-ruby/-/dict-ruby-5.1.1.tgz", {}, "sha512-LHrp84oEV6q1ZxPPyj4z+FdKyq1XAKYPtmGptrd+uwHbrF/Ns5+fy6gtSi7pS+uc0zk3JdO9w/tPK+8N1/7WUA=="],
+    "@cspell/dict-ruby": ["@cspell/dict-ruby@5.1.2", "https://npm.postfmly.com/@cspell/dict-ruby/-/dict-ruby-5.1.2.tgz", {}, "sha512-f6Slf11N91ittf71AWlfVVG9GZPezVRBfcMPCTNTWhUsY/VEspkBRZYDhPXjV4df3jqHy5YJs8nlsFcFVF/bMA=="],
 
     "@cspell/dict-rust": ["@cspell/dict-rust@4.1.2", "https://npm.postfmly.com/@cspell/dict-rust/-/dict-rust-4.1.2.tgz", {}, "sha512-O1FHrumYcO+HZti3dHfBPUdnDFkI+nbYK3pxYmiM1sr+G0ebOd6qchmswS0Wsc6ZdEVNiPYJY/gZQR6jfW3uOg=="],
 
@@ -166,7 +166,7 @@
 
     "@cspell/dict-shell": ["@cspell/dict-shell@1.2.0", "https://npm.postfmly.com/@cspell/dict-shell/-/dict-shell-1.2.0.tgz", {}, "sha512-PVctvT22lJ49niMiakO8xieY7ELCAzjSqhejWR7bAMb5AZ9F4WDEs+XdGMnoVHWeXq7K5rcepLPmEJb+37zzIw=="],
 
-    "@cspell/dict-software-terms": ["@cspell/dict-software-terms@5.3.0", "https://npm.postfmly.com/@cspell/dict-software-terms/-/dict-software-terms-5.3.0.tgz", {}, "sha512-HEMvFWeItTA5A/MFxrH5fpOz9DU7ormXaGp1PJPsd0jt+qqaYNpevGIgTfIhfp/hsabPyAGa51N/DeDT0ZMg2Q=="],
+    "@cspell/dict-software-terms": ["@cspell/dict-software-terms@5.4.2", "https://npm.postfmly.com/@cspell/dict-software-terms/-/dict-software-terms-5.4.2.tgz", {}, "sha512-C2tS1JjxqHef9TpPRm08a6n+PJCrKrD6FsmPEyXb2J6TFef4FFnKRcGOf3pFnd+a6/oyQgXZWeKiECH6lBFjQA=="],
 
     "@cspell/dict-sql": ["@cspell/dict-sql@2.2.1", "https://npm.postfmly.com/@cspell/dict-sql/-/dict-sql-2.2.1.tgz", {}, "sha512-qDHF8MpAYCf4pWU8NKbnVGzkoxMNrFqBHyG/dgrlic5EQiKANCLELYtGlX5auIMDLmTf1inA0eNtv74tyRJ/vg=="],
 
@@ -182,21 +182,21 @@
 
     "@cspell/dict-zig": ["@cspell/dict-zig@1.0.0", "https://npm.postfmly.com/@cspell/dict-zig/-/dict-zig-1.0.0.tgz", {}, "sha512-XibBIxBlVosU06+M6uHWkFeT0/pW5WajDRYdXG2CgHnq85b0TI/Ks0FuBJykmsgi2CAD3Qtx8UHFEtl/DSFnAQ=="],
 
-    "@cspell/dynamic-import": ["@cspell/dynamic-import@10.0.1", "https://npm.postfmly.com/@cspell/dynamic-import/-/dynamic-import-10.0.1.tgz", { "dependencies": { "@cspell/url": "10.0.1", "import-meta-resolve": "^4.2.0" } }, "sha512-mP1gdq00aIcH8HxNMqnH11X6BKxLcneDtFgl/ecjIKnaGKwi44m8AndP5Kr4ODaYdl8UUw9O3dJh7KaQXnLHZQ=="],
+    "@cspell/dynamic-import": ["@cspell/dynamic-import@10.1.1", "https://npm.postfmly.com/@cspell/dynamic-import/-/dynamic-import-10.1.1.tgz", { "dependencies": { "@cspell/url": "10.1.1", "import-meta-resolve": "^4.2.0" } }, "sha512-bNI+Gp0Rnx/WyOvni4TksvNWeQvCfyQAhZRIGMt+9bbLyniVagnftnoahV/yoF9h3WWxU3tL2eaVZx9B5dijuQ=="],
 
-    "@cspell/filetypes": ["@cspell/filetypes@10.0.1", "https://npm.postfmly.com/@cspell/filetypes/-/filetypes-10.0.1.tgz", {}, "sha512-Z5S35giU5IW49fBBq6BksUbE8PC4IYPfaKuwl5Nl9jkf/OkAKiBmCowKX45NzRUQInwK/GSqqIUifrNeI6LdLw=="],
+    "@cspell/filetypes": ["@cspell/filetypes@10.1.1", "https://npm.postfmly.com/@cspell/filetypes/-/filetypes-10.1.1.tgz", {}, "sha512-sSREdKF4roC4QM2n0qUgv10W74nUO7CUhDTCz3Sd3mHlUM46WI8QqbAIZFNTm5U4SuVaVAmXzsZvM69O/rOjvQ=="],
 
-    "@cspell/rpc": ["@cspell/rpc@10.0.1", "https://npm.postfmly.com/@cspell/rpc/-/rpc-10.0.1.tgz", {}, "sha512-axSRKv3zEAmBm66iD/FV/MPmE4/Yf7c3PZiwTW894Yd3iEhtn3KPKeTrqQ2/tDrhB1Z2qTsap/Hue0MK4o5WXg=="],
+    "@cspell/rpc": ["@cspell/rpc@10.1.1", "https://npm.postfmly.com/@cspell/rpc/-/rpc-10.1.1.tgz", {}, "sha512-sWQ++D8++6pAv8FSCfJOpc/t/yoK1r0xwcBb23SenOA9nvcmI7CwAp2FK2oByLnDTe+Bh6mQWtRRZSr3gfoGhQ=="],
 
-    "@cspell/strong-weak-map": ["@cspell/strong-weak-map@10.0.1", "https://npm.postfmly.com/@cspell/strong-weak-map/-/strong-weak-map-10.0.1.tgz", {}, "sha512-lenN1DVyPi8nJLSMSJJ670ddTjyiruLueuSZO1qLcxBqUhgxDt/mALu9N/1m6WdOVcg6m/5cLiZVg2KOo2UzRw=="],
+    "@cspell/strong-weak-map": ["@cspell/strong-weak-map@10.1.1", "https://npm.postfmly.com/@cspell/strong-weak-map/-/strong-weak-map-10.1.1.tgz", {}, "sha512-s7PsRDfZO5J1dB0gtlaeNxwaibDUCYIFlbdzMawlUejR/UNrhDgDIr48OScoOt5SaUHijEVpFDkrWVyCs5R7oQ=="],
 
-    "@cspell/url": ["@cspell/url@10.0.1", "https://npm.postfmly.com/@cspell/url/-/url-10.0.1.tgz", {}, "sha512-abYYgI29wJhWIfWTYrYuzRYDcHQUQ1N5ylnhxYn1NJnIQMqUWGLbDmt12JABtZ+R6h6UNatQrS7rhP86etvJyQ=="],
+    "@cspell/url": ["@cspell/url@10.1.1", "https://npm.postfmly.com/@cspell/url/-/url-10.1.1.tgz", {}, "sha512-5O2bZ5H/zPomc4qshTpfCbIltallsdQNwlw6j/Gl+eVElrlFsgc0kzuYJdk1BMnpA0ZXPXYH7XVKCGIKzLcr2g=="],
 
-    "@postfmly/config": ["@postfmly/config@1.4.44", "https://npm.postfmly.com/@postfmly/config/-/config-1.4.44.tgz", { "peerDependencies": { "@biomejs/biome": "^2.5.8", "@types/bun": "^1.3.14", "@types/node": "^26.2.0", "cspell": "^10.0.1", "cve-lite-cli": "^1.29.0", "globals": "^17.9.0", "typescript": "^7.0.2" }, "bin": { "link-configs": "bin/link-configs" } }, "sha512-U0AKbuR1wSHm3AfZE4dVHOsu13mcCuO1u+fE0LgAw/U+F7rZdZUqw13xCgUKABSwBl6f3x/VsI96pQr20KUNKg=="],
+    "@postfmly/config": ["@postfmly/config@1.4.54", "https://npm.postfmly.com/@postfmly/config/-/config-1.4.54.tgz", { "peerDependencies": { "@biomejs/biome": "^2.5.11", "@types/bun": "^1.4.0", "@types/node": "^26.4.0", "cspell": "^10.1.1", "cve-lite-cli": "^1.31.0", "globals": "^17.11.0", "typescript": "^7.0.2" }, "bin": { "link-configs": "bin/link-configs" } }, "sha512-EPe9PdQYLVFMFcn5oiP25IDXQn67n0jU0ciNNb05y44SMjCxqH0Bgs8xGgeioJrTt/+4Eddnzh8a1WPwQ7SDZg=="],
 
-    "@types/bun": ["@types/bun@1.3.14", "https://npm.postfmly.com/@types/bun/-/bun-1.3.14.tgz", { "dependencies": { "bun-types": "1.3.14" } }, "sha512-h1hFqFVcvAvD9j9K7ZW7vd82aSA+rTdznZa+5bwvCwqSB1jmmfLcbIWhOLx1/+boy/xmjgCs/OMUL8hRJSmnPw=="],
+    "@types/bun": ["@types/bun@1.4.0", "https://npm.postfmly.com/@types/bun/-/bun-1.4.0.tgz", { "dependencies": { "bun-types": "1.4.0" } }, "sha512-K+lZULY23vRgK/CfTjFIV+tyifaNdSMlPh9j+6mQ/cLfpOznLyAuzgV/JQysyECpkBQLVMSyvjlr2fBUSA9wFQ=="],
 
-    "@types/node": ["@types/node@26.2.0", "https://npm.postfmly.com/@types/node/-/node-26.2.0.tgz", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg=="],
+    "@types/node": ["@types/node@26.4.0", "https://npm.postfmly.com/@types/node/-/node-26.4.0.tgz", { "dependencies": { "undici-types": "~8.3.0" } }, "sha512-faiGnoIrLH/V8cibOMEAZ8pMw6oXqSukl29ra4mN8GdaB2ZewzeaLj+INpV5N+Z1eKWzY+IzaIZH2EIR6YZRNQ=="],
 
     "@typescript/typescript-aix-ppc64": ["@typescript/typescript-aix-ppc64@7.0.2", "https://npm.postfmly.com/@typescript/typescript-aix-ppc64/-/typescript-aix-ppc64-7.0.2.tgz", { "os": "aix", "cpu": "ppc64" }, "sha512-MTKKkWB7p/0E9xi1d1tHtZ5PiLkGEMIq88pK2CubZjOsLtYTLqhgIgi6zepFa+9GHZ6h05NMCkQxGKiPXMxXtQ=="],
 
@@ -240,7 +240,7 @@
 
     "@yarnpkg/lockfile": ["@yarnpkg/lockfile@1.1.0", "https://npm.postfmly.com/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz", {}, "sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ=="],
 
-    "ansi-regex": ["ansi-regex@6.2.2", "https://npm.postfmly.com/ansi-regex/-/ansi-regex-6.2.2.tgz", {}, "sha512-Bq3SmSpyFHaWjPk8If9yc6svM8c56dB5BAtW4Qbw5jHTwwXXcTLoRMkpDJp6VL0XzlWaCHTXrkFURMYmD0sLqg=="],
+    "ansi-regex": ["ansi-regex@6.3.0", "https://npm.postfmly.com/ansi-regex/-/ansi-regex-6.3.0.tgz", {}, "sha512-WpDfL7NO6j7tH88IDBNVdUJxDh9nmCteAVW9dsep846XdwF4naCBK+/tGLX3KJgcpgMRXCFlTM2hKGoK9FsdrQ=="],
 
     "array-timsort": ["array-timsort@1.0.3", "https://npm.postfmly.com/array-timsort/-/array-timsort-1.0.3.tgz", {}, "sha512-/+3GRL7dDAGEfM6TseQk/U+mi18TU2Ms9I3UlLdUMhz2hbvGNTKdj9xniwXfUqgYhHxRx0+8UnKkvlNwVU+cWQ=="],
 
@@ -260,37 +260,37 @@
 
     "buffer": ["buffer@5.7.1", "https://npm.postfmly.com/buffer/-/buffer-5.7.1.tgz", { "dependencies": { "base64-js": "^1.3.1", "ieee754": "^1.1.13" } }, "sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ=="],
 
-    "bun-types": ["bun-types@1.3.14", "https://npm.postfmly.com/bun-types/-/bun-types-1.3.14.tgz", { "dependencies": { "@types/node": "*" } }, "sha512-4N0ig0fEomHt5R0KCFWjovxow98rIoRwKolrYdCcknNwMekCXRnWEUvgu5soYV8QXtVsrUD8B95MBOZGPvr6KQ=="],
+    "bun-types": ["bun-types@1.4.0", "https://npm.postfmly.com/bun-types/-/bun-types-1.4.0.tgz", { "dependencies": { "@types/node": "*" } }, "sha512-iIKw23BspnQQYd3prITOBxeUsxBHnwzX6YJfGMuNOZzeNcMmVqzIIVGRm1l69ogaPQmb4wB6BN8mA5bE9YuC5Q=="],
 
-    "chalk": ["chalk@5.6.2", "https://npm.postfmly.com/chalk/-/chalk-5.6.2.tgz", {}, "sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA=="],
+    "chalk": ["chalk@6.0.0", "https://npm.postfmly.com/chalk/-/chalk-6.0.0.tgz", {}, "sha512-2uNTXIuTTxk7ciZgAU1BQcgnchcG0xXnrs6jzkQfj9SsRa9M2s5zE8WT96hS6KmG4MzWHSrvH43DF1m4XRkrFg=="],
 
     "chalk-template": ["chalk-template@1.1.2", "https://npm.postfmly.com/chalk-template/-/chalk-template-1.1.2.tgz", { "dependencies": { "chalk": "^5.2.0" } }, "sha512-2bxTP2yUH7AJj/VAXfcA+4IcWGdQ87HwBANLt5XxGTeomo8yG0y95N1um9i5StvhT/Bl0/2cARA5v1PpPXUxUA=="],
 
     "chownr": ["chownr@1.1.4", "https://npm.postfmly.com/chownr/-/chownr-1.1.4.tgz", {}, "sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg=="],
 
-    "commander": ["commander@14.0.3", "https://npm.postfmly.com/commander/-/commander-14.0.3.tgz", {}, "sha512-H+y0Jo/T1RZ9qPP4Eh1pkcQcLRglraJaSLoyOtHxu6AapkjWVCy2Sit1QQ4x3Dng8qDlSsZEet7g5Pq06MvTgw=="],
+    "commander": ["commander@15.0.0", "https://npm.postfmly.com/commander/-/commander-15.0.0.tgz", {}, "sha512-z67u4ZhzCL/Tydu1lJARtEZYWbWaN7oYLHbsuzocr6y4N6WZAagG3RQ4FW61V1/0+jImpj293XfrcYnd1qxtPg=="],
 
     "comment-json": ["comment-json@5.0.0", "https://npm.postfmly.com/comment-json/-/comment-json-5.0.0.tgz", { "dependencies": { "array-timsort": "^1.0.3", "esprima": "^4.0.1" } }, "sha512-uiqLcOiVDJtBP8WGkZHEP+FZIhTzP1dxvn59EfoYUi9gqupjrBWVQkO2atDrbnKPwLeotFYDsuNb26uBMqB+hw=="],
 
-    "cspell": ["cspell@10.0.1", "https://npm.postfmly.com/cspell/-/cspell-10.0.1.tgz", { "dependencies": { "@cspell/cspell-json-reporter": "10.0.1", "@cspell/cspell-performance-monitor": "10.0.1", "@cspell/cspell-pipe": "10.0.1", "@cspell/cspell-types": "10.0.1", "@cspell/cspell-worker": "10.0.1", "@cspell/dynamic-import": "10.0.1", "@cspell/url": "10.0.1", "ansi-regex": "^6.2.2", "chalk": "^5.6.2", "chalk-template": "^1.1.2", "commander": "^14.0.3", "cspell-config-lib": "10.0.1", "cspell-dictionary": "10.0.1", "cspell-gitignore": "10.0.1", "cspell-glob": "10.0.1", "cspell-io": "10.0.1", "cspell-lib": "10.0.1", "fast-json-stable-stringify": "^2.1.0", "flatted": "^3.4.2", "semver": "^7.8.1", "tinyglobby": "^0.2.16" }, "bin": { "cspell": "bin.mjs", "cspell-esm": "bin.mjs" } }, "sha512-Gg6w/flT3fKfl3la62hfTnhtNnDQ+9mU7kUhVqw/axl/Ms4oENw0oJMkWFIoj4f6nL/SDPz7KcPXd2XbkKFNmQ=="],
+    "cspell": ["cspell@10.1.1", "https://npm.postfmly.com/cspell/-/cspell-10.1.1.tgz", { "dependencies": { "@cspell/cspell-json-reporter": "10.1.1", "@cspell/cspell-performance-monitor": "10.1.1", "@cspell/cspell-pipe": "10.1.1", "@cspell/cspell-types": "10.1.1", "@cspell/cspell-worker": "10.1.1", "@cspell/dynamic-import": "10.1.1", "@cspell/url": "10.1.1", "ansi-regex": "^6.3.0", "chalk": "^6.0.0", "chalk-template": "^1.1.2", "commander": "^15.0.0", "cspell-config-lib": "10.1.1", "cspell-dictionary": "10.1.1", "cspell-gitignore": "10.1.1", "cspell-glob": "10.1.1", "cspell-io": "10.1.1", "cspell-lib": "10.1.1", "fast-json-stable-stringify": "^2.1.0", "flatted": "^3.4.4", "semver": "^7.8.5", "tinyglobby": "^0.2.17" }, "bin": { "cspell": "bin.mjs", "cspell-esm": "bin.mjs" } }, "sha512-imoZaB1+9gHMyFFMDBY7VbtIdDwkRJXQjs3bIfo1H+AUJnw/vMxLwXk8mnPmH7ziw2m2kyGF+rPAVUE93VEAAA=="],
 
-    "cspell-config-lib": ["cspell-config-lib@10.0.1", "https://npm.postfmly.com/cspell-config-lib/-/cspell-config-lib-10.0.1.tgz", { "dependencies": { "@cspell/cspell-types": "10.0.1", "comment-json": "^5.0.0", "smol-toml": "^1.6.1", "yaml": "^2.9.0" } }, "sha512-hMpo/0j6k7pbiqrLDOLJKD2IGP9XwhjKf2miiM6p84Xeo4nyuFZaxxDCQ68R851HSYFrrdltgpoipMbj1h2Tnw=="],
+    "cspell-config-lib": ["cspell-config-lib@10.1.1", "https://npm.postfmly.com/cspell-config-lib/-/cspell-config-lib-10.1.1.tgz", { "dependencies": { "@cspell/cspell-types": "10.1.1", "comment-json": "^5.0.0", "smol-toml": "^1.8.0", "yaml": "^2.9.0" } }, "sha512-/AgOcOxO0jmAJCkShhaPQqSNrx+QUkEOncTf2uFnIx4/gRxFwiRZ0Zrv6PyHNBTC5vY82+qB6scT5Pj30n174A=="],
 
-    "cspell-dictionary": ["cspell-dictionary@10.0.1", "https://npm.postfmly.com/cspell-dictionary/-/cspell-dictionary-10.0.1.tgz", { "dependencies": { "@cspell/cspell-performance-monitor": "10.0.1", "@cspell/cspell-pipe": "10.0.1", "@cspell/cspell-types": "10.0.1", "cspell-trie-lib": "10.0.1", "fast-equals": "^6.0.0" } }, "sha512-3cZ659vgsZWkzGQJR/sNqGDVt/OnvTSieLKI76V++4t1bHJfochb9ZrrwsuMsb1VPGiyqClUP1/O6WrefF/FVg=="],
+    "cspell-dictionary": ["cspell-dictionary@10.1.1", "https://npm.postfmly.com/cspell-dictionary/-/cspell-dictionary-10.1.1.tgz", { "dependencies": { "@cspell/cspell-performance-monitor": "10.1.1", "@cspell/cspell-pipe": "10.1.1", "@cspell/cspell-types": "10.1.1", "cspell-trie-lib": "10.1.1", "fast-equals": "^6.0.2" } }, "sha512-94eW96hjAa3ASAjtmWkC1h1S7GLNHEoDftViilZ/nQzHxeYHp8kU73/0Jqjawr3tzfNvdKV0Bq/8zgeEp1LNrA=="],
 
-    "cspell-gitignore": ["cspell-gitignore@10.0.1", "https://npm.postfmly.com/cspell-gitignore/-/cspell-gitignore-10.0.1.tgz", { "dependencies": { "@cspell/url": "10.0.1", "cspell-glob": "10.0.1", "cspell-io": "10.0.1" }, "bin": { "cspell-gitignore": "bin.mjs" } }, "sha512-wN23U61Mx6qPJN3CesOmBU9vnbJ0jQm/ylK0iaVui3CcnO7Zzl5qLu5mPHUzGQGm8yso6qjyxqo16Ho7LpZGOQ=="],
+    "cspell-gitignore": ["cspell-gitignore@10.1.1", "https://npm.postfmly.com/cspell-gitignore/-/cspell-gitignore-10.1.1.tgz", { "dependencies": { "@cspell/url": "10.1.1", "cspell-glob": "10.1.1", "cspell-io": "10.1.1" }, "bin": { "cspell-gitignore": "bin.mjs" } }, "sha512-vYQjziKDH8qQzj/gHHJPKwmAqwfQIHBvyqukR0Uf1WzY1X08Ns9jMl5JDRUL7ffcosDYsReIhLxy2KJrxRkrng=="],
 
-    "cspell-glob": ["cspell-glob@10.0.1", "https://npm.postfmly.com/cspell-glob/-/cspell-glob-10.0.1.tgz", { "dependencies": { "@cspell/url": "10.0.1", "picomatch": "^4.0.4" } }, "sha512-7bII9J3aSSpZDwhx7w+zfQXbMxHZQ3be0ilUp5bHrsjz6o07v/NqOHMGcwKdPn1sw2dxDz9sv057xE5pqXnSdw=="],
+    "cspell-glob": ["cspell-glob@10.1.1", "https://npm.postfmly.com/cspell-glob/-/cspell-glob-10.1.1.tgz", { "dependencies": { "@cspell/url": "10.1.1", "picomatch": "^4.0.5" } }, "sha512-+xRfPD/KHU3JCMPK3Blt3AchW6KAzsyrNUdNns9mmkDRiej5Vl19kdN3eKh7B/0XoAKnX/v67tucCu/jr8MTug=="],
 
-    "cspell-grammar": ["cspell-grammar@10.0.1", "https://npm.postfmly.com/cspell-grammar/-/cspell-grammar-10.0.1.tgz", { "dependencies": { "@cspell/cspell-pipe": "10.0.1", "@cspell/cspell-types": "10.0.1" }, "bin": { "cspell-grammar": "bin.mjs" } }, "sha512-xC9AFYmaI9wsO//a7S5tdDGKGJVD5UEEsTg+Up2fi7lPfXIryisYmV6tePNL1SEg0idYss4ja8LUZ3Mib09BjQ=="],
+    "cspell-grammar": ["cspell-grammar@10.1.1", "https://npm.postfmly.com/cspell-grammar/-/cspell-grammar-10.1.1.tgz", { "dependencies": { "@cspell/cspell-pipe": "10.1.1", "@cspell/cspell-types": "10.1.1" }, "bin": { "cspell-grammar": "bin.mjs" } }, "sha512-mOHufusJEld/q8ZfC+AhequR515QIOHC0LdD1z6PU+Mpn3GRBGJBWK56iUwHH4XX935GsUMJFIQuOoMXXcbAsw=="],
 
-    "cspell-io": ["cspell-io@10.0.1", "https://npm.postfmly.com/cspell-io/-/cspell-io-10.0.1.tgz", { "dependencies": { "@cspell/cspell-service-bus": "10.0.1", "@cspell/url": "10.0.1" } }, "sha512-8C2ka07faxflnaqEBO3pektS21XViE/SEHT7F5ZD1ou7FyMR5u3xawTBJSczClfsxLt/WYeztBYrpmGAjmjksw=="],
+    "cspell-io": ["cspell-io@10.1.1", "https://npm.postfmly.com/cspell-io/-/cspell-io-10.1.1.tgz", { "dependencies": { "@cspell/cspell-service-bus": "10.1.1", "@cspell/url": "10.1.1" } }, "sha512-Gcl2B2hKOJBqi+nf1ZnZ2XZj+VWN+AZLfQZR5dxxny3Ggy51vW8AfJX8lF8Ev/c559AkC5G7KkO2jkVuZ4SVsA=="],
 
-    "cspell-lib": ["cspell-lib@10.0.1", "https://npm.postfmly.com/cspell-lib/-/cspell-lib-10.0.1.tgz", { "dependencies": { "@cspell/cspell-bundled-dicts": "10.0.1", "@cspell/cspell-performance-monitor": "10.0.1", "@cspell/cspell-pipe": "10.0.1", "@cspell/cspell-resolver": "10.0.1", "@cspell/cspell-types": "10.0.1", "@cspell/dynamic-import": "10.0.1", "@cspell/filetypes": "10.0.1", "@cspell/rpc": "10.0.1", "@cspell/strong-weak-map": "10.0.1", "@cspell/url": "10.0.1", "cspell-config-lib": "10.0.1", "cspell-dictionary": "10.0.1", "cspell-glob": "10.0.1", "cspell-grammar": "10.0.1", "cspell-io": "10.0.1", "cspell-trie-lib": "10.0.1", "env-paths": "^4.0.0", "gensequence": "^8.0.8", "import-fresh": "^4.0.0", "resolve-from": "^5.0.0", "vscode-languageserver-textdocument": "^1.0.12", "vscode-uri": "^3.1.0", "xdg-basedir": "^5.1.0" } }, "sha512-RpsIPiLzc4/YMW8BMRKpyJ81x439qjYWcqgdKeXnMkbKM88J9PexzutfFf/4v97v96KzfNitEzMpbI0uj8OeUg=="],
+    "cspell-lib": ["cspell-lib@10.1.1", "https://npm.postfmly.com/cspell-lib/-/cspell-lib-10.1.1.tgz", { "dependencies": { "@cspell/cspell-bundled-dicts": "10.1.1", "@cspell/cspell-performance-monitor": "10.1.1", "@cspell/cspell-pipe": "10.1.1", "@cspell/cspell-resolver": "10.1.1", "@cspell/cspell-types": "10.1.1", "@cspell/dynamic-import": "10.1.1", "@cspell/filetypes": "10.1.1", "@cspell/rpc": "10.1.1", "@cspell/strong-weak-map": "10.1.1", "@cspell/url": "10.1.1", "cspell-config-lib": "10.1.1", "cspell-dictionary": "10.1.1", "cspell-glob": "10.1.1", "cspell-grammar": "10.1.1", "cspell-io": "10.1.1", "cspell-trie-lib": "10.1.1", "env-paths": "^4.0.0", "gensequence": "^8.0.8", "import-fresh": "^4.0.0", "resolve-from": "^5.0.0", "vscode-languageserver-textdocument": "^1.0.12", "vscode-uri": "^3.1.0", "xdg-basedir": "^5.1.0" } }, "sha512-jckdiCU/3pkvJ21G77R2fl93R6JjpYwP+wj8qQNUewYlTl9bdhMJi8xgLb4os7CJnHD5kA59ow8tNvh45d3zDw=="],
 
-    "cspell-trie-lib": ["cspell-trie-lib@10.0.1", "https://npm.postfmly.com/cspell-trie-lib/-/cspell-trie-lib-10.0.1.tgz", { "peerDependencies": { "@cspell/cspell-types": "10.0.1" } }, "sha512-BFvhalSkRQFjKrZ//FKK7fRGrZFpifnxB5AwCkzsIsBZqicsfafcQ1xP21qpb0QqyV/IomjNgviG+tRJs+0rMw=="],
+    "cspell-trie-lib": ["cspell-trie-lib@10.1.1", "https://npm.postfmly.com/cspell-trie-lib/-/cspell-trie-lib-10.1.1.tgz", { "peerDependencies": { "@cspell/cspell-types": "10.1.1" } }, "sha512-4ico1ebFl9lvP1Yr4pD+FxOYRS7Ct+ImV8v0KcEclxMixqNku4NoVP/CvmE1AyyVB3FN16fITN0vo3ZAR79PFw=="],
 
-    "cve-lite-cli": ["cve-lite-cli@1.29.0", "https://npm.postfmly.com/cve-lite-cli/-/cve-lite-cli-1.29.0.tgz", { "dependencies": { "better-sqlite3": "^12.8.0", "fflate": "^0.8.2", "yaml": "^2.7.1", "yarn-lockfile": "^1.1.0" }, "bin": { "cve-lite": "dist/index.js" } }, "sha512-8ePDxSTKTjLI2xKBKAqndqb+HJ4PXAg3WwJtQbdcHl+kg1lS9Tl5kf0BSDOuoUdmn8sxGpmGBnFMPN/tAWXTbA=="],
+    "cve-lite-cli": ["cve-lite-cli@1.31.0", "https://npm.postfmly.com/cve-lite-cli/-/cve-lite-cli-1.31.0.tgz", { "dependencies": { "better-sqlite3": "^12.8.0", "fflate": "^0.8.2", "yaml": "^2.7.1", "yarn-lockfile": "^1.1.0" }, "bin": { "cve-lite": "dist/index.js" } }, "sha512-E/V8y4dU4jfUc44pmqNj8GvgA0Mwli1wSqKvsZ5KBw80mwS51Bdt5Xeq1WsO9NvqqG67vd8YGGHObkrglTWoEg=="],
 
     "dayjs": ["dayjs@1.11.23", "https://npm.postfmly.com/dayjs/-/dayjs-1.11.23.tgz", {}, "sha512-QDTCU0M0MxR3hQfnlDJfwekQiaanm1ubOD231u73WBckQ/fsamwRLiE2GBz6D3a/xF1NgfiDLJjXBa1hYOYTtQ=="],
 
@@ -330,7 +330,7 @@
 
     "global-directory": ["global-directory@5.0.0", "https://npm.postfmly.com/global-directory/-/global-directory-5.0.0.tgz", { "dependencies": { "ini": "6.0.0" } }, "sha512-1pgFdhK3J2LeM+dVf2Pd424yHx2ou338lC0ErNP2hPx4j8eW1Sp0XqSjNxtk6Tc4Kr5wlWtSvz8cn2yb7/SG/w=="],
 
-    "globals": ["globals@17.10.0", "https://npm.postfmly.com/globals/-/globals-17.10.0.tgz", {}, "sha512-V0kztuWST2k8A/VbxAY8+L+7+Rgo3fyA24IHRLrZp7HOzJjV0gHSaZUjK9lpP/IrBSNite2tZ1prhRkinRu1CA=="],
+    "globals": ["globals@17.11.0", "https://npm.postfmly.com/globals/-/globals-17.11.0.tgz", {}, "sha512-Z2I8hM+PbJDXQDq3Icgpzv+mPdwr68iZUU9d5WW4FuXfDUQfkZaZuvjMv42/5crNyw154+9+VWXbYrUgDXbxNw=="],
 
     "husky": ["husky@9.1.7", "https://npm.postfmly.com/husky/-/husky-9.1.7.tgz", { "bin": { "husky": "bin.js" } }, "sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA=="],
 
@@ -348,7 +348,7 @@
 
     "lcov-total": ["lcov-total@2.1.1", "https://npm.postfmly.com/lcov-total/-/lcov-total-2.1.1.tgz", { "bin": { "lcov-total": "bin/cmd.js" } }, "sha512-PHk0K1N4TVAZErw4uxeinmJnJn3OL7k4C1QK+Cjua4pLKZ8hMiB1ABc2p7NgpNMXo37P97F2UobMkt1//aS72Q=="],
 
-    "lint-staged": ["lint-staged@17.3.0", "https://npm.postfmly.com/lint-staged/-/lint-staged-17.3.0.tgz", { "dependencies": { "picomatch": "^4.0.5", "string-argv": "^0.3.2", "tinyexec": "^1.2.4" }, "optionalDependencies": { "yaml": "^2.9.0" }, "bin": { "lint-staged": "bin/lint-staged.js" } }, "sha512-woZS3vNe3UKqBaLPvbLOtKRY4tLANpWQhom12MGWqC8Mh1lCOO+WgSwmX2amjJAqTY9BkXYW87fCUH5H9Ph6xw=="],
+    "lint-staged": ["lint-staged@17.4.1", "https://npm.postfmly.com/lint-staged/-/lint-staged-17.4.1.tgz", { "dependencies": { "picomatch": "^4.0.7", "string-argv": "^0.3.2", "tinyexec": "^1.3.0" }, "optionalDependencies": { "yaml": "^2.9.0" }, "bin": { "lint-staged": "bin/lint-staged.js" } }, "sha512-FmJeudcalbSfg1du+JCfvi5vS6Qt08KgbfLWiHinbef+2JJwUZwAWVoaO1AcJVUTWPfk0t30PMQNwPAeCzYQ+Q=="],
 
     "lru-cache": ["lru-cache@11.5.2", "https://npm.postfmly.com/lru-cache/-/lru-cache-11.5.2.tgz", {}, "sha512-4pfM1Ff0x50o0tQwb5ucw/RzNyD0/YJME6IVcStalZuMWxdt3sR3huStTtxz4PUmvZfRguvDejasvQ2kifR11g=="],
 
@@ -364,7 +364,7 @@
 
     "napi-build-utils": ["napi-build-utils@2.0.0", "https://npm.postfmly.com/napi-build-utils/-/napi-build-utils-2.0.0.tgz", {}, "sha512-GEbrYkbfF7MoNaoh2iGG84Mnf/WZfB0GdGEsM8wz7Expx/LlWf5U8t9nvJKXSp3qr5IsEbK04cBGhol/KwOsWA=="],
 
-    "node-abi": ["node-abi@3.94.0", "https://npm.postfmly.com/node-abi/-/node-abi-3.94.0.tgz", { "dependencies": { "semver": "^7.3.5" } }, "sha512-W5ZNO5KRPB5TkYmGVD9F6YqhsglXJzE6etpbmT+f6EQElhiX/UTG551cnsRGvLG3fyZEg9HwaDmNmj5nwJ4z9g=="],
+    "node-abi": ["node-abi@3.96.0", "https://npm.postfmly.com/node-abi/-/node-abi-3.96.0.tgz", { "dependencies": { "semver": "^7.3.5" } }, "sha512-rebQ/lz7i0EkoLzUVSrKRzA69zMkwLp95kKMWoMDkkM00Suxz0D7zEQPwRml5fQum24mj7bPvmlgLAmu2JCiYg=="],
 
     "once": ["once@1.4.0", "https://npm.postfmly.com/once/-/once-1.4.0.tgz", { "dependencies": { "wrappy": "1" } }, "sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w=="],
 
@@ -374,7 +374,7 @@
 
     "picocolors": ["picocolors@1.1.1", "https://npm.postfmly.com/picocolors/-/picocolors-1.1.1.tgz", {}, "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="],
 
-    "picomatch": ["picomatch@4.0.5", "https://npm.postfmly.com/picomatch/-/picomatch-4.0.5.tgz", {}, "sha512-RvwwcruNjI1ncT5xRakeyS9Lf8lcItv34KD+aif+VH9kduAyfYBipGh12274xtenIPZ119/R9BdTBa8gAwSh0A=="],
+    "picomatch": ["picomatch@4.0.7", "https://npm.postfmly.com/picomatch/-/picomatch-4.0.7.tgz", {}, "sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA=="],
 
     "prebuild-install": ["prebuild-install@7.1.3", "https://npm.postfmly.com/prebuild-install/-/prebuild-install-7.1.3.tgz", { "dependencies": { "detect-libc": "^2.0.0", "expand-template": "^2.0.3", "github-from-package": "0.0.0", "minimist": "^1.2.3", "mkdirp-classic": "^0.5.3", "napi-build-utils": "^2.0.0", "node-abi": "^3.3.0", "pump": "^3.0.0", "rc": "^1.2.7", "simple-get": "^4.0.0", "tar-fs": "^2.0.0", "tunnel-agent": "^0.6.0" }, "bin": { "prebuild-install": "bin.js" } }, "sha512-8Mf2cbV7x1cXPUILADGI3wuhfqWvtiLA1iclTDbFRZkgRQS0NqsPZphna9V+HyTEadheuPmjaJMsbzKQFOzLug=="],
 
@@ -420,9 +420,9 @@
 
     "util-deprecate": ["util-deprecate@1.0.2", "https://npm.postfmly.com/util-deprecate/-/util-deprecate-1.0.2.tgz", {}, "sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw=="],
 
-    "vscode-languageserver-textdocument": ["vscode-languageserver-textdocument@1.0.12", "https://npm.postfmly.com/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.12.tgz", {}, "sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA=="],
+    "vscode-languageserver-textdocument": ["vscode-languageserver-textdocument@1.0.14", "https://npm.postfmly.com/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.14.tgz", {}, "sha512-EQyqJMi552E4ZTf46izQ4Fj6XquqxCySR3J5ZSD1SisMf6RfpeOWHxGBE8Gr6V0/3GHIGdAzDn8F8+1nTGCnoQ=="],
 
-    "vscode-uri": ["vscode-uri@3.1.0", "https://npm.postfmly.com/vscode-uri/-/vscode-uri-3.1.0.tgz", {}, "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ=="],
+    "vscode-uri": ["vscode-uri@3.2.0", "https://npm.postfmly.com/vscode-uri/-/vscode-uri-3.2.0.tgz", {}, "sha512-m2gXo3bn0G1kT9InzMf07fTbqMbGtyckj3bH5ktLO+1Ssv+yiATZ4dhwaQv9UZWxJh6E9IFGnQyjgWVDWVBDrg=="],
 
     "wrappy": ["wrappy@1.0.2", "https://npm.postfmly.com/wrappy/-/wrappy-1.0.2.tgz", {}, "sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ=="],
 
@@ -431,6 +431,8 @@
     "yaml": ["yaml@2.9.0", "https://npm.postfmly.com/yaml/-/yaml-2.9.0.tgz", { "bin": { "yaml": "bin.mjs" } }, "sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA=="],
 
     "yarn-lockfile": ["yarn-lockfile@1.1.1", "https://npm.postfmly.com/yarn-lockfile/-/yarn-lockfile-1.1.1.tgz", { "dependencies": { "@yarnpkg/lockfile": "*" } }, "sha512-IxrY3PqAoensmJ6a+klUMQnpfF9REjUJcCgyHs9GKK97RMl8jnvVrbJx5S7dmkC+X8DI03mzWuoeTjrnIfQ3dA=="],
+
+    "chalk-template/chalk": ["chalk@5.6.2", "https://npm.postfmly.com/chalk/-/chalk-5.6.2.tgz", {}, "sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA=="],
 
     "rc/ini": ["ini@1.3.8", "https://npm.postfmly.com/ini/-/ini-1.3.8.tgz", {}, "sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew=="],
   }
