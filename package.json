@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -38,10 +38,11 @@
     "lint:ts": "bun run --bun tsc",
     "prepare": "bun run --bun husky",
     "scan": "bun audit && bun run --bun cve-lite --check-overrides",
-    "test": "bun test --isolate --bail",
+    "test": "bun test --isolate --dots --bail",
+    "test:full": "bun test --isolate --bail",
     "test:browser": "bun run build:browser && bunx --bun serve --single --no-clipboard tests",
     "test:coverage": "bun test --isolate --dots --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
-    "test:full": "bun test --isolate --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
+    "test:covergae:full": "bun test --isolate --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
     "updates": "bunx --bun npm-check-updates --dep overrides,prod,dev --cooldown 0 --install never --packageManager bun --peer"
   },
   "lint-staged": {
@@ -52,7 +53,7 @@
     "@biomejs/biome": "2.5.11",
     "@types/bun": "1.4.0",
     "@types/node": "26.4.0",
-    "cspell": "10.1.1",
+    "cspell": "10.2.0",
     "cve-lite-cli": "1.31.0",
     "globals": "17.11.0",
     "typescript": "7.0.2"
