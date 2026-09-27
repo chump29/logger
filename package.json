@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "Info/error console logger",
   "keywords": [
     "info",
@@ -35,7 +35,7 @@
     "test:coverage": "bun test --isolate --dots --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
     "test:coverage:full": "bun test --isolate --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
     "test:full": "bun test --isolate --bail",
-    "updates": "bunx --bun npm-check-updates --dep overrides,prod,dev,peer --cooldown 0 --install never --packageManager bun --peer"
+    "updates": "bunx --bun npm-check-updates --dep overrides,prod,dev --cooldown 0 --install never --packageManager bun --peer"
   },
   "lint-staged": {
     "*": "bun run --bun cspell --no-must-find-files",
@@ -59,13 +59,11 @@
     "picocolors": "^1.1.1"
   },
   "devDependencies": {
+    "@postfmly/config": "^1.4.79",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lcov-total": "^2.1.1",
     "lint-staged": "^17.6.0"
-  },
-  "peerDependencies": {
-    "@postfmly/config": "^1.4.76"
   },
   "packageManager": "bun@1.4.2",
   "engines": {
