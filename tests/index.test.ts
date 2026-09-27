@@ -1,14 +1,20 @@
-import { describe, expect, type jest, mock, spyOn, test } from "bun:test"
+import { beforeAll, describe, expect, type jest, mock, spyOn, test } from "bun:test"
 
 import { error, info } from "../index.ts"
 
+const infoSpy: jest.Mock = spyOn(console, "info")
+const errorSpy: jest.Mock = spyOn(console, "error")
+
+beforeAll((): void => {
+  infoSpy.mockReset()
+  errorSpy.mockReset()
+})
+
+mock.module("browser-or-node", (): unknown => ({
+  isBrowser: true
+}))
+
 describe("index.ts", (): void => {
-  const infoSpy: jest.Mock = spyOn(console, "info")
-
-  mock.module("browser-or-node", (): unknown => ({
-    isBrowser: true
-  }))
-
   test("info fail", (): void => {
     info()
     expect(infoSpy).not.toHaveBeenCalledTimes(1)
@@ -32,8 +38,6 @@ describe("index.ts", (): void => {
 
     expect(infoSpy).toHaveBeenCalledTimes(NUM_TIMES_INFO)
   })
-
-  const errorSpy: jest.Mock = spyOn(console, "error")
 
   test("error fail", (): void => {
     error()

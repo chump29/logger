@@ -6,7 +6,7 @@
 
 ---
 
-![Bun](https://img.shields.io/badge/Bun-~1.4.0-informational?style=plastic&logo=bun "Bun")
+![Bun](https://img.shields.io/badge/Bun-1.4.2-informational?style=plastic&logo=bun "Bun")
 
 ![CodeQL](https://github.com/chump29/logger/workflows/CodeQL/badge.svg "CodeQL") &nbsp;
 ![Coverage](https://img.shields.io/badge/Coverage-100%25-success?style=plastic&logo=jest "Coverage")
@@ -47,14 +47,14 @@ bun run lint
 # tests only
 bun run test
 
-# for browser
-bun run test:browser
+# tests only, verbose
+bun run test:full
 
 # with coverage
 bun run test:coverage
 
 # with coverage, verbose
-bun run test:full
+bun run test:coverage:full
 ```
 
 ---

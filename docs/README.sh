@@ -1,10 +1,11 @@
 #!/usr/bin/env -S bash -e
 
+export _user=chump29
+export _repo=logger
+
 echo -e "📌 Packages:\n"
 
 _bun=$(bun --version)
-bun pm pkg set packageManager="bun@$_bun" engines.bun="~$_bun" > /dev/null 2>&1
-_bun=~$_bun
 export _bun
 echo -e " • Bun: $_bun"
 
