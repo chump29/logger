@@ -21,8 +21,7 @@ const handleObject = (obj: object): void => {
 
 /**
  * Shows error messages in console
- * @function
- * @param {unknown[]} objs Data (primitives or objects) to display
+ * @param objs Data (primitives or objects) to display
  */
 const error = (...objs: unknown[]): void => {
   if (objs.length === 0) {
@@ -48,8 +47,7 @@ const error = (...objs: unknown[]): void => {
 
 /**
  * Shows info messages in console
- * @function
- * @param {unknown[]} objs Data (primitives or objects) to display
+ * @param objs Data (primitives or objects) to display
  */
 const info = (...objs: unknown[]): void => {
   if (objs.length === 0) {
@@ -71,15 +69,12 @@ const info = (...objs: unknown[]): void => {
 type VarsType = Record<string, string | number | boolean>
 
 /**
- * Displays variables
- * @function
- * @param {VarsType} vars Variables
- * @param {string[]} [redacted] Variables to redact
+ * Shows variables in console
+ * @param vars Variables
+ * @param redacted Variables to redact
  */
-const printVars = (vars: VarsType, redacted: string[] = []): void => {
-  type T = keyof VarsType
-
-  const REDACTED: T[] = redacted
+const printVars = <T extends VarsType>(vars: T, redacted: (keyof T)[] = []): void => {
+  type V = keyof T
 
   const varsCopy: VarsType = { ...vars }
 
@@ -107,7 +102,7 @@ const printVars = (vars: VarsType, redacted: string[] = []): void => {
 
   console.table({
     ...varsCopy,
-    ...Object.fromEntries(REDACTED.map((k: T): [T, string] => [k, red("[REDACTED]")]))
+    ...Object.fromEntries(redacted.map((k: V): [V, string] => [k, red("[REDACTED]")]))
   })
 }
 
