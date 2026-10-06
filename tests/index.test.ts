@@ -1,13 +1,15 @@
 import { beforeAll, describe, expect, type jest, mock, spyOn, test } from "bun:test"
 
-import { error, info } from "../index.ts"
+import { error, info, printVars } from "../index.ts"
 
 const infoSpy: jest.Mock = spyOn(console, "info")
 const errorSpy: jest.Mock = spyOn(console, "error")
+const tableSpy: jest.Mock = spyOn(console, "table")
 
 beforeAll((): void => {
   infoSpy.mockReset()
   errorSpy.mockReset()
+  tableSpy.mockReset()
 })
 
 mock.module("browser-or-node", (): unknown => ({
@@ -51,5 +53,11 @@ describe("index.ts", (): void => {
     error("test", ["me"], new Error("This is a test"), null)
 
     expect(errorSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
+  })
+
+  test("printVars pass", (): void => {
+    printVars({ BOOL: false, COLOR: "#ffff00", NUM: 123, SECRET: "!" }, ["SECRET"])
+
+    expect(tableSpy).toHaveBeenCalled()
   })
 })

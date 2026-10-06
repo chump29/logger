@@ -1,6 +1,6 @@
 # @postfmly/logger
 
-### Info/error console logger <!-- markdownlint-disable MD001 -->
+### Info/error/variable console logger <!-- markdownlint-disable MD001 -->
 
 - Handles primitives and objects
 
@@ -30,6 +30,7 @@ import { error, info } from "@postfmly/logger"
 
 info("this", { is: "a" }, ["simple", "test"], null)
 error("test", [ "me" ], new Error("foo"), null)
+printVars({ BOOL: false, INT: 1, STR: "secret" }, ["STR"]) // STR will be [REDACTED]
 ```
 
 ---
