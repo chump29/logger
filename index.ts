@@ -78,7 +78,12 @@ const printVars = <T extends VarsType>(vars: T, redacted: (keyof T)[] = []): voi
 
   const varsCopy: VarsType = { ...vars }
 
-  const color: string = String(vars["COLOR"] || "")
+  let color: string = ""
+  try {
+    color = String(vars["COLOR"] || "")
+  } catch {
+    // nop
+  }
   if (color) {
     const hex: string = "abcdef0123456789"
 
