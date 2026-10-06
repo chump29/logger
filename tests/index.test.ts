@@ -56,7 +56,7 @@ describe("index.ts", (): void => {
   })
 
   test("printVars pass", (): void => {
-    printVars({ BOOL: false, COLOR: "#ffff00", NUM: 123, SECRET: "!" }, ["SECRET"])
+    printVars({ BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" }, ["SECRET"])
 
     expect(tableSpy).toHaveBeenCalled()
   })

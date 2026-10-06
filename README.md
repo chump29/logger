@@ -30,7 +30,7 @@ import { error, info } from "@postfmly/logger"
 
 info("this", { is: "a" }, ["simple", "test"], null)
 error("test", [ "me" ], new Error("foo"), null)
-printVars({ BOOL: false, INT: 1, STR: "secret" }, ["STR"]) // STR will be [REDACTED]
+printVars({ BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" }, ["SECRET"]) // STR will be [REDACTED]
 ```
 
 ---

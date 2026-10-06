@@ -66,7 +66,7 @@ const info = (...objs: unknown[]): void => {
   }
 }
 
-type VarsType = Record<string, string | number | boolean>
+type VarsType = Record<string, string | number | boolean | Date>
 
 /**
  * Shows variables in console
