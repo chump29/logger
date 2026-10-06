@@ -1,6 +1,7 @@
 import { bgBlue, bgHex, bgRed, cyan, red, white } from "ansis"
 import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
+import { GetColorName } from "hex-color-to-color-name"
 import { match } from "ts-pattern"
 
 const getTime = (): string => white(dayjs().format("MM/DD/YYYY [@] HH:mm:ss.SSS"))
@@ -79,10 +80,10 @@ const printVars = <T extends VarsType>(vars: T, redacted: (keyof T)[] = []): voi
   try {
     const color: string = String(vars["COLOR"] || "")
     if (color.length > 0) {
-      varsCopy["COLOR"] = `${color} ${bgHex(color)`⌷`}`
+      varsCopy["COLOR"] = `${color} » ${GetColorName(color)} ${bgHex(color)`  `}`
     }
   } catch {
-    // handles vars["COLOR"] error if nonexistent
+    // ! NOTE: Handles vars["COLOR"] error if nonexistent
   }
 
   type V = T[keyof T]
@@ -102,7 +103,7 @@ const printVars = <T extends VarsType>(vars: T, redacted: (keyof T)[] = []): voi
           )
           .when(
             (d: unknown): d is Date => d instanceof Date,
-            (date: Date): string => date.toISOString()
+            (date: Date): string => dayjs(date).unix().toString()
           )
           .otherwise((val: V): number | boolean => val as number | boolean)
       ])

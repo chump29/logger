@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Info/error/variable console logger",
   "keywords": [
     "info",
@@ -59,6 +59,7 @@
     "ansis": "^4.4.0",
     "browser-or-node": "^3.0.0",
     "dayjs": "^1.11.23",
+    "hex-color-to-color-name": "^2.0.7",
     "ts-pattern": "^5.9.0"
   },
   "devDependencies": {
