@@ -1,7 +1,7 @@
+import { bgBlue, bgHex, bgRed, cyan, red, white } from "ansis"
 import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
-import { caseInsensitive, charIn, createRegExp, exactly } from "magic-regexp"
-import { bgBlue, bgRed, cyan, red, white } from "picocolors"
+import { match } from "ts-pattern"
 
 const getTime = (): string => white(dayjs().format("MM/DD/YYYY [@] HH:mm:ss.SSS"))
 
@@ -74,41 +74,40 @@ type VarsType = Record<string, string | number | boolean | Date>
  * @param redacted Variables to redact
  */
 const printVars = <T extends VarsType>(vars: T, redacted: (keyof T)[] = []): void => {
-  type V = keyof T
+  const varsCopy: VarsType = { ...vars } as VarsType
 
-  const varsCopy: VarsType = { ...vars }
-
-  let color: string = ""
   try {
-    color = String(vars["COLOR"] || "")
-  } catch {
-    // nop
-  }
-  if (color) {
-    const hex: string = "abcdef0123456789"
-
-    const regexp = createRegExp(
-      exactly("#").at.lineStart(),
-      charIn(hex).times(2).groupedAs("rr"),
-      charIn(hex).times(2).groupedAs("gg"),
-      charIn(hex).times(2).groupedAs("bb").at.lineEnd(),
-      [caseInsensitive]
-    )
-
-    const match = color.match(regexp)
-    const groups = match?.groups
-    if (groups?.rr && groups.gg && groups.bb) {
-      const { rr, gg, bb } = groups
-      const [r, g, b] = [rr, gg, bb].map((val: string): number => Number.parseInt(val, 16))
-
-      varsCopy["COLOR"] = `${vars["COLOR"]} \x1b[48;2;${r};${g};${b}m⌷\x1b[0m`
+    const color: string = String(vars["COLOR"] || "")
+    if (color.length > 0) {
+      varsCopy["COLOR"] = `${color} ${bgHex(color)`⌷`}`
     }
+  } catch {
+    // handles vars["COLOR"] error if nonexistent
   }
 
-  console.table({
-    ...varsCopy,
-    ...Object.fromEntries(redacted.map((k: V): [V, string] => [k, red("[REDACTED]")]))
-  })
+  type V = T[keyof T]
+
+  console.table(
+    Object.fromEntries(
+      Object.keys(varsCopy).map((k: string) => [
+        k,
+        match<V, string | number | boolean>(varsCopy[k] as V)
+          .when(
+            (): boolean => redacted.includes(k as keyof T),
+            (): string => red("[REDACTED]")
+          )
+          .when(
+            (s: unknown): s is string => typeof s === "string",
+            (s: string): string => (s === "" ? cyan("[BLANK]") : s)
+          )
+          .when(
+            (d: unknown): d is Date => d instanceof Date,
+            (date: Date): string => date.toISOString()
+          )
+          .otherwise((val: V): number | boolean => val as number | boolean)
+      ])
+    )
+  )
 }
 
 export { error, info, printVars }
