@@ -23,7 +23,7 @@
   "type": "module",
   "scripts": {
     "build": "bun run --bun bunup",
-    "check": "bunx --bun depcheck --ignores=\"@postfmly/config,@types/*,bun:test,lcov-total\" || :",
+    "check": "bunx --bun depcheck --ignores=\"@postfmly/config,@types/*,bun:test,lcov-total\"",
     "preinstall": "bunx --bun only-allow bun",
     "lint": "bun run scan && bun run lint:spell && bun run lint:biome && bun run lint:ts",
     "lint:biome": "bun run --bun biome check --write --verbose --error-on-warnings",
