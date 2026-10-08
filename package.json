@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Info/error/variable console logger",
   "keywords": [
     "info",
@@ -63,7 +63,7 @@
     "ts-pattern": "^5.9.0"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.1",
+    "@postfmly/config": "^1.6.2",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lcov-total": "^2.1.1",
