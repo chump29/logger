@@ -2,11 +2,16 @@ import { beforeAll, describe, expect, type jest, mock, spyOn, test } from "bun:t
 
 import { error, info, printVars } from "../index.ts"
 
-const infoSpy: jest.Mock = spyOn(console, "info")
-const errorSpy: jest.Mock = spyOn(console, "error")
-const tableSpy: jest.Mock = spyOn(console, "table")
+const groupSpy: jest.Mock = spyOn(console, "groupCollapsed").mockImplementation((): void => undefined)
+const dirSpy: jest.Mock = spyOn(console, "dir").mockImplementation((): void => undefined)
+const infoSpy: jest.Mock = spyOn(console, "info").mockImplementation((): void => undefined)
+const errorSpy: jest.Mock = spyOn(console, "error").mockImplementation((): void => undefined)
+const tableSpy: jest.Mock = spyOn(console, "table").mockImplementation((): void => undefined)
 
 beforeAll((): void => {
+  // suppress
+  groupSpy.mockReset()
+  dirSpy.mockReset()
   infoSpy.mockReset()
   errorSpy.mockReset()
   tableSpy.mockReset()
@@ -39,6 +44,8 @@ describe("index.ts", (): void => {
     )
 
     expect(infoSpy).toHaveBeenCalledTimes(NUM_TIMES_INFO)
+    expect(groupSpy).toHaveBeenCalledTimes(2)
+    expect(dirSpy).toHaveBeenCalledTimes(2)
   })
 
   test("error fail", (): void => {
@@ -53,11 +60,16 @@ describe("index.ts", (): void => {
     error("test", ["me"], new Error("This is a test"), null)
 
     expect(errorSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
+    expect(groupSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
+    expect(dirSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
   })
 
-  test("printVars pass", (): void => {
-    printVars({ BLANK: "", BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" }, ["SECRET"])
+  test("printVars", (): void => {
+    printVars(
+      { ARR: ["foo", "bar"], BLANK: "", BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" },
+      ["SECRET"]
+    )
 
-    expect(tableSpy).toHaveBeenCalled()
+    expect(tableSpy).toHaveBeenCalledTimes(1)
   })
 })

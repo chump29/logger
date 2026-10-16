@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "Info/error/variable console logger",
   "keywords": [
     "info",
@@ -31,8 +31,8 @@
     "lint:ts": "bun check",
     "prepare": "bun run --bun husky",
     "scan": "bun run scan:audit && bun run scan:cve && bun run scan:e18e",
-    "scan:audit": "bun audit",
-    "scan:cve": "bunx --bun cve-lite-cli --check-overrides --check-network --check-maintenance",
+    "scan:audit": "bun audit --prod",
+    "scan:cve": "bunx --bun cve-lite-cli --check-overrides --check-network --check-maintenance --prod-only --only-used",
     "scan:e18e": "bunx --bun @e18e/cli analyze",
     "test": "bun test --isolate --dots --bail",
     "test:coverage": "bun test --isolate --dots --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail",
@@ -46,23 +46,24 @@
   },
   "overrides": {
     "@biomejs/biome": "2.5.15",
-    "@types/bun": "1.4.2",
-    "@types/node": "26.6.4",
+    "@types/bun": "1.4.3",
+    "@types/node": "26.6.5",
     "chalk": "6.0.1",
-    "cspell": "10.3.6",
+    "cspell": "10.4.0",
     "globals": "17.13.0",
     "ini": "7.0.0",
-    "strip-json-comments": "5.0.3"
+    "strip-json-comments": "5.0.3",
+    "undici-types": "8.12.2"
   },
   "dependencies": {
     "ansis": "^4.4.0",
     "browser-or-node": "^3.0.0",
     "dayjs": "^1.11.23",
     "hex-color-to-color-name": "^2.0.8",
-    "ts-pattern": "^5.9.0"
+    "ts-pattern": "^5.9.2"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.3",
+    "@postfmly/config": "^1.6.6",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lcov-total": "^2.1.1",

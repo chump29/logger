@@ -67,14 +67,16 @@ const info = (...objs: unknown[]): void => {
   }
 }
 
-type VarsType = Record<string, string | number | boolean | Date>
+type NonEmpty<T> = keyof T extends never ? never : T
+
+type VarsType = Record<string, string | number | boolean | Date | string[]>
 
 /**
  * Shows variables in console
  * @param vars Variables
  * @param redacted Variables to redact
  */
-const printVars = <T extends VarsType>(vars: T, redacted: (keyof T)[] = []): void => {
+const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] = []): void => {
   const varsCopy: VarsType = { ...vars } as VarsType
 
   try {
@@ -105,7 +107,21 @@ const printVars = <T extends VarsType>(vars: T, redacted: (keyof T)[] = []): voi
             (d: unknown): d is Date => d instanceof Date,
             (date: Date): string => dayjs(date).unix().toString()
           )
-          .otherwise((val: V): number | boolean => val as number | boolean)
+          .when(
+            (s: unknown): s is string[] => Array.isArray(s) && s.every((i: unknown) => typeof i === "string"),
+            (s: string[]): string => s.join(" ")
+          )
+          .when(
+            (n: unknown): n is number => typeof n === "number" && !Number.isNaN(n),
+            (n: number): number => n
+          )
+          .when(
+            (b: unknown): b is boolean => typeof b === "boolean",
+            (b: boolean): boolean => b
+          )
+          .otherwise((val: unknown): never => {
+            throw new Error(`Unknown type for ${k}: ${typeof val}`)
+          })
       ])
     )
   )

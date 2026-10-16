@@ -4,6 +4,8 @@
 
 - Handles primitives and objects
 
+###### NOTE: `printVars()` supports: `string`, `number`, `boolean`, `Date`, `string[]`
+
 ---
 
 ![Bun](https://img.shields.io/badge/Bun-$_bun-informational?style=plastic&logo=bun "Bun")
@@ -29,8 +31,14 @@ bun add @postfmly/logger
 import { error, info } from "@postfmly/logger"
 
 info("this", { is: "a" }, ["simple", "test"], null)
+
 error("test", [ "me" ], new Error("foo"), null)
-printVars({ BLANK: "", BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" }, ["SECRET"]) // BLANK will be [BLANK], STR will be [REDACTED]
+
+printVars(
+  { ARR: ["foo", "bar"], BLANK: "", BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" },
+  ["SECRET"]
+)
+// BLANK will be [BLANK], STR will be [REDACTED]
 ```
 
 ---
