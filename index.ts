@@ -1,7 +1,7 @@
 import { bgBlue, bgHex, bgRed, cyan, red, white } from "ansis"
 import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
-import { GetColorName } from "hex-color-to-color-name"
+import { GetColorName as getColorName } from "hex-color-to-color-name"
 import { match } from "ts-pattern"
 
 const getTime = (): string => white(dayjs().format("MM/DD/YYYY [@] HH:mm:ss.SSS"))
@@ -60,7 +60,7 @@ const info = (...objs: unknown[]): void => {
     if (obj && typeof obj === "object") {
       console.info(cyan("⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${cyan(":")}`)
 
-      handleObject(obj as object)
+      handleObject(obj satisfies object)
     } else {
       console.info(cyan(" ⤷"), obj)
     }
@@ -77,12 +77,14 @@ type VarsType = Record<string, string | number | boolean | Date | string[]>
  * @param redacted Variables to redact
  */
 const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] = []): void => {
-  const varsCopy: VarsType = { ...vars } as VarsType
+  const varsCopy: VarsType = { ...vars } satisfies VarsType
 
   try {
     const color: string = String(vars["COLOR"] || "")
     if (color.length > 0) {
-      varsCopy["COLOR"] = `${color} » ${GetColorName(color)} ${bgHex(color)`  `}`
+      const swatch: string = bgHex(color)`  `
+
+      varsCopy["COLOR"] = `${color} » ${getColorName(color)} ${swatch}`
     }
   } catch {
     // ! NOTE: Handles vars["COLOR"] error if nonexistent
@@ -94,9 +96,10 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
     Object.fromEntries(
       Object.keys(varsCopy).map((k: string) => [
         k,
+        // biome-ignore lint/nursery/noUnsafeTypeAssertion: KISS
         match<V, string | number | boolean>(varsCopy[k] as V)
           .when(
-            (): boolean => redacted.includes(k as keyof T),
+            (): boolean => redacted.includes(k satisfies keyof T),
             (): string => red("[REDACTED]")
           )
           .when(
@@ -120,7 +123,7 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
             (b: boolean): boolean => b
           )
           .otherwise((val: unknown): never => {
-            throw new Error(`Unknown type for ${k}: ${typeof val}`)
+            throw new Error(`Unknown type for ${k}: ${typeof val}`) // * NOTE: should never happen because of VarsType
           })
       ])
     )

@@ -38,8 +38,8 @@ describe("index.ts", (): void => {
       "this",
       {
         is: "a"
-      } as ITest,
-      ["simple", "test"] as string[],
+      } satisfies ITest,
+      ["simple", "test"] satisfies string[],
       null
     )
 

@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "description": "Info/error/variable console logger",
   "keywords": [
     "info",
@@ -27,7 +27,7 @@
     "preinstall": "bunx --bun only-allow bun",
     "lint": "bun run lint:spell && bun run lint:biome && bun run lint:ts",
     "lint:biome": "bun run --bun biome check --write --verbose --error-on-warnings",
-    "lint:spell": "bun run --bun cspell --dot --verbose .",
+    "lint:spell": "bun run --bun cspell --dot .",
     "lint:ts": "bun check",
     "prepare": "bun run --bun husky",
     "scan": "bun run scan:audit && bun run scan:cve && bun run scan:e18e",
@@ -45,15 +45,10 @@
     "*.{json,ts}": "bun run --bun biome ci --error-on-warnings --no-errors-on-unmatched"
   },
   "overrides": {
-    "@biomejs/biome": "2.5.15",
-    "@types/bun": "1.4.3",
-    "@types/node": "26.6.5",
     "chalk": "6.0.1",
-    "cspell": "10.4.0",
-    "globals": "17.13.0",
     "ini": "7.0.0",
     "strip-json-comments": "5.0.3",
-    "undici-types": "8.12.2"
+    "undici-types": "8.12.3"
   },
   "dependencies": {
     "ansis": "^4.4.0",
@@ -63,7 +58,7 @@
     "ts-pattern": "^5.9.2"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.6",
+    "@postfmly/config": "^1.6.9",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lcov-total": "^2.1.1",
