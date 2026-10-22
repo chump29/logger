@@ -56,7 +56,7 @@ describe("index.ts", (): void => {
     expect(dirSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
   })
 
-  test("printVars pass", async (): Promise<void> => {
+  test("printVars", async (): Promise<void> => {
     await printVars(
       {
         ARRAY: ["foo", "bar"],
