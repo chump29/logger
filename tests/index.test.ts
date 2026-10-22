@@ -71,11 +71,11 @@ describe("index.ts", (): void => {
         BLANK: "",
         BOOL: false,
         COLOR: "#c0ffee",
-        N: null,
         NOW: new Date(),
+        NULL: null,
         NUM: 123,
         SECRET: "!",
-        U: undefined
+        UNDEFINED: undefined
       },
       ["SECRET"]
     )

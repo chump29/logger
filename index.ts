@@ -1,4 +1,4 @@
-import { bgBlue, bgHex, bgRed, cyan, red, white } from "ansis"
+import { bgBlue, bgHex, bgRed, cyan, magenta, red, white } from "ansis"
 import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
 import { GetColorName as getColorName } from "hex-color-to-color-name"
@@ -37,7 +37,7 @@ const error = (...objs: unknown[]): void => {
         console.error(red(" ⤷"), `${obj.name}: ${obj.message}`)
       }
 
-      console.info(red("⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${red(":")}`)
+      console.info(red(" ⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${red(":")}`)
 
       handleObject(obj)
     } else {
@@ -58,7 +58,7 @@ const info = (...objs: unknown[]): void => {
   console.info(bgBlue(white(" INFO ")) + cyan(" [") + getTime() + cyan("] "))
   for (const obj of objs) {
     if (obj && typeof obj === "object") {
-      console.info(cyan("⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${cyan(":")}`)
+      console.info(cyan(" ⤵︎"), `[object ${Array.isArray(obj) ? "Array" : "Object"}]${cyan(":")}`)
 
       handleObject(obj satisfies object)
     } else {
@@ -82,9 +82,7 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
   try {
     const color: string = String(vars["COLOR"] ?? "")
     if (color.length > 0) {
-      const swatch: string = bgHex(color)`  `
-
-      varsCopy["COLOR"] = `${color} » ${getColorName(color)} ${swatch}`
+      varsCopy["COLOR"] = `${color} » ${getColorName(color)} ${bgHex(color)("  ")}`
     }
   } catch {
     // * NOTE: Do nothing if vars["COLOR"] is undefined
@@ -108,11 +106,14 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
           )
           .when(
             (d: unknown): d is Date => d instanceof Date,
-            (date: Date): string => dayjs(date).unix().toString()
+            (date: Date): string => `${dayjs(date).unix().toString()} ${magenta.italic("(secs)")}`
           )
           .when(
             (s: unknown): s is string[] => Array.isArray(s) && s.every((i: unknown) => typeof i === "string"),
-            (s: string[]): string => s.join(" ")
+            (s: string[]): string => {
+              const len: string = magenta.italic`[${s.length}]`
+              return `${s.join(", ")} ${len}`
+            }
           )
           .when(
             (n: unknown): n is number => typeof n === "number" && !Number.isNaN(n),
@@ -124,11 +125,11 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
           )
           .when(
             (u: unknown): u is undefined => typeof u === "undefined",
-            (): string => "undefined"
+            (): string => cyan("[UNDEFINED]")
           )
           .when(
             (n: null): n is null => n === null,
-            (): string => "null"
+            (): string => cyan("[NULL]")
           )
           .otherwise((val: unknown): never => {
             throw new Error(`Unknown type for ${k}: ${typeof val}`) // * NOTE: should never happen because of VarsType

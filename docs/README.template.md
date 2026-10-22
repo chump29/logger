@@ -40,16 +40,23 @@ printVars(
     BLANK: "",
     BOOL: false,
     COLOR: "#c0ffee",
-    N: null,
-    NOW: new Date(),
+    NOW: new Date(2026, 10, 21),
+    NULL: null,
     NUM: 123,
     SECRET: "SECRET",
-    U: undefined
+    UNDEFINED: undefined
   },
   ["SECRET"]
 )
-// BLANK will be [BLANK], N will be "null", SECRET will be [REDACTED], U will be "undefined"
 ```
+
+#### Output:
+
+![info](./images/info.webp "info")
+
+![error](./images/error.webp "error")
+
+![printVars](./images/printVars.webp "printVars")
 
 ---
 
