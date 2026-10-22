@@ -1,21 +1,13 @@
-import { beforeAll, describe, expect, type jest, mock, spyOn, test } from "bun:test"
+import { describe, expect, type jest, mock, spyOn, test } from "bun:test"
 
 import { error, info, printVars } from "../index.ts"
 
+// * NOTE: suppress console output
 const groupSpy: jest.Mock = spyOn(console, "groupCollapsed").mockImplementation((): void => undefined)
 const dirSpy: jest.Mock = spyOn(console, "dir").mockImplementation((): void => undefined)
 const infoSpy: jest.Mock = spyOn(console, "info").mockImplementation((): void => undefined)
 const errorSpy: jest.Mock = spyOn(console, "error").mockImplementation((): void => undefined)
 const tableSpy: jest.Mock = spyOn(console, "table").mockImplementation((): void => undefined)
-
-beforeAll((): void => {
-  // suppress
-  groupSpy.mockReset()
-  dirSpy.mockReset()
-  infoSpy.mockReset()
-  errorSpy.mockReset()
-  tableSpy.mockReset()
-})
 
 mock.module("browser-or-node", (): unknown => ({
   isBrowser: true
@@ -64,8 +56,8 @@ describe("index.ts", (): void => {
     expect(dirSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
   })
 
-  test("printVars", (): void => {
-    printVars(
+  test("printVars", async (): Promise<void> => {
+    await printVars(
       {
         ARR: ["foo", "bar"],
         BLANK: "",

@@ -1,7 +1,6 @@
 import { bgBlue, bgHex, bgRed, cyan, magenta, red, white } from "ansis"
 import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
-import { GetColorName as getColorName } from "hex-color-to-color-name"
 import { match } from "ts-pattern"
 
 const getTime = (): string => white(dayjs().format("MM/DD/YYYY [@] HH:mm:ss.SSS"))
@@ -20,10 +19,8 @@ const handleObject = (obj: object): void => {
   }
 }
 
-/**
- * Shows error messages in console
- * @param objs Data (primitives or objects) to display
- */
+/** Shows error messages in console
+ * @param objs Data (primitives or objects) to display */
 const error = (...objs: unknown[]): void => {
   if (objs.length === 0) {
     return
@@ -46,10 +43,8 @@ const error = (...objs: unknown[]): void => {
   }
 }
 
-/**
- * Shows info messages in console
- * @param objs Data (primitives or objects) to display
- */
+/** Shows info messages in console
+ * @param objs Data (primitives or objects) to display */
 const info = (...objs: unknown[]): void => {
   if (objs.length === 0) {
     return
@@ -71,17 +66,16 @@ type NonEmpty<T> = keyof T extends never ? never : T
 
 type VarsType = Record<string, string | number | boolean | Date | string[] | undefined | null>
 
-/**
- * Shows variables in console
+/** Shows variables in console
  * @param vars Variables
- * @param redacted Variables to redact
- */
-const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] = []): void => {
+ * @param redacted Variables to redact */
+const printVars = async <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] = []): Promise<void> => {
   const varsCopy: VarsType = { ...vars } satisfies VarsType
 
   try {
     const color: string = String(vars["COLOR"] ?? "")
     if (color.length > 0) {
+      const { GetColorName: getColorName } = await import("hex-color-to-color-name")
       varsCopy["COLOR"] = `${color} » ${getColorName(color)} ${bgHex(color)("  ")}`
     }
   } catch {
