@@ -56,16 +56,17 @@ describe("index.ts", (): void => {
     expect(dirSpy).toHaveBeenCalledTimes(NUM_TIMES_ERROR)
   })
 
-  test("printVars", async (): Promise<void> => {
+  test("printVars pass", async (): Promise<void> => {
     await printVars(
       {
-        ARR: ["foo", "bar"],
+        ARRAY: ["foo", "bar"],
         BLANK: "",
-        BOOL: false,
+        BOOLEAN: true,
         COLOR: "#c0ffee",
-        NOW: new Date(),
+        DATE: new Date(),
+        NAN: Number.NaN,
         NULL: null,
-        NUM: 123,
+        NUMBER: 123,
         SECRET: "!",
         UNDEFINED: undefined
       },

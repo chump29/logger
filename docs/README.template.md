@@ -1,10 +1,12 @@
+<!-- cSpell: ignore RGBA -->
+
 # @postfmly/logger
 
 ### Info/error/variable console logger <!-- markdownlint-disable MD001 -->
 
 - Handles primitives and objects
 
-###### NOTE: `printVars()` supports `string`, `number`, `boolean`, `Date`, `string[]`, `undefined`, `null`
+###### NOTE: `printVars()` supports `string`, `number`/`NaN`, `boolean`, `Date`, `string[]`, `undefined`, `null`
 
 ---
 
@@ -36,19 +38,22 @@ error("test", ["me"], new Error("foo"), null)
 
 printVars(
   {
-    ARR: ["foo", "bar"],
+    ARRAY: ["foo", "bar"],
     BLANK: "",
-    BOOL: false,
-    COLOR: "#c0ffee",
-    NOW: new Date(2026, 10, 21),
+    BOOLEAN: true,
+    COLOR: "#c0ffee", // NOTE: key must be named COLOR for advanced output
+    DATE: new Date(),
+    NAN: Number.NaN,
     NULL: null,
-    NUM: 123,
-    SECRET: "SECRET",
+    NUMBER: 123,
+    SECRET: "!",
     UNDEFINED: undefined
   },
   ["SECRET"]
 )
 ```
+
+###### NOTE: Acceptable `COLOR` formats @ [GitHub](https://github.com/scttcper/tinycolor#accepted-string-input "GitHub")
 
 #### Output:
 

@@ -1,4 +1,4 @@
-import { bgBlue, bgHex, bgRed, cyan, magenta, red, white } from "ansis"
+import { bgBlue, bgRed, cyan, magenta, red, white } from "ansis"
 import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
 import { match } from "ts-pattern"
@@ -72,14 +72,16 @@ type VarsType = Record<string, string | number | boolean | Date | string[] | und
 const printVars = async <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] = []): Promise<void> => {
   const varsCopy: VarsType = { ...vars } satisfies VarsType
 
-  try {
-    const color: string = String(vars["COLOR"] ?? "")
-    if (color.length > 0) {
+  const color: string = String(vars["COLOR"] ?? "")
+  if (color.length > 0) {
+    const { TinyColor } = await import("@ctrl/tinycolor")
+    const c = new TinyColor(color)
+    if (c.isValid) {
       const { GetColorName: getColorName } = await import("hex-color-to-color-name")
-      varsCopy["COLOR"] = `${color} » ${getColorName(color)} ${bgHex(color)("  ")}`
+      const { bgHex } = await import("ansis")
+      const cHex: string = c.toHexString()
+      varsCopy["COLOR"] = `${c.toHexShortString()} » ${getColorName(cHex)} ${bgHex(cHex)("  ")}`
     }
-  } catch {
-    // * NOTE: Do nothing if vars["COLOR"] is undefined
   }
 
   type V = T[keyof T]
@@ -110,8 +112,8 @@ const printVars = async <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof
             }
           )
           .when(
-            (n: unknown): n is number => typeof n === "number" && !Number.isNaN(n),
-            (n: number): number => n
+            (n: unknown): n is number => typeof n === "number",
+            (n: number): string | number => (Number.isNaN(n) ? cyan("[NaN]") : n)
           )
           .when(
             (b: unknown): b is boolean => typeof b === "boolean",

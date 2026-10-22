@@ -1,17 +1,19 @@
+<!-- cSpell: ignore RGBA -->
+
 # @postfmly/logger
 
 ### Info/error/variable console logger <!-- markdownlint-disable MD001 -->
 
 - Handles primitives and objects
 
-###### NOTE: `printVars()` supports `string`, `number`, `boolean`, `Date`, `string[]`, `undefined`, `null`
+###### NOTE: `printVars()` supports `string`, `number`/`NaN`, `boolean`, `Date`, `string[]`, `undefined`, `null`
 
 ---
 
-![Bun](https://img.shields.io/badge/Bun-1.4.3-informational?style=plastic&logo=bun "Bun")
+![Bun](https://img.shields.io/badge/Bun-1.4.4-informational?style=plastic&logo=bun "Bun")
 
 ![CodeQL](https://github.com/chump29/logger/workflows/CodeQL/badge.svg "CodeQL") &nbsp;
-![Coverage](https://img.shields.io/badge/Coverage-98.96%25-success?style=plastic&logo=jest "Coverage")
+![Coverage](https://img.shields.io/badge/Coverage-98.91%25-success?style=plastic&logo=jest "Coverage")
 
 ![NO AI](https://img.shields.io/badge/NO-AI-orange?style=plastic "NO AI") &nbsp;
 ![License](https://img.shields.io/github/license/chump29/logger?style=plastic&color=blueviolet&label=License&logo=gplv3 "GPLv3") &nbsp; <!-- markdownlint-disable MD013 -->
@@ -36,19 +38,22 @@ error("test", ["me"], new Error("foo"), null)
 
 printVars(
   {
-    ARR: ["foo", "bar"],
+    ARRAY: ["foo", "bar"],
     BLANK: "",
-    BOOL: false,
-    COLOR: "#c0ffee",
-    NOW: new Date(2026, 10, 21),
+    BOOLEAN: true,
+    COLOR: "#c0ffee", // NOTE: key must be named COLOR for advanced output
+    DATE: new Date(),
+    NAN: Number.NaN,
     NULL: null,
-    NUM: 123,
-    SECRET: "SECRET",
+    NUMBER: 123,
+    SECRET: "!",
     UNDEFINED: undefined
   },
   ["SECRET"]
 )
 ```
+
+###### NOTE: Acceptable `COLOR` formats @ [GitHub](https://github.com/scttcper/tinycolor#accepted-string-input "GitHub")
 
 #### Output:
 
