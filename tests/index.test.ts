@@ -66,7 +66,17 @@ describe("index.ts", (): void => {
 
   test("printVars", (): void => {
     printVars(
-      { ARR: ["foo", "bar"], BLANK: "", BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" },
+      {
+        ARR: ["foo", "bar"],
+        BLANK: "",
+        BOOL: false,
+        COLOR: "#c0ffee",
+        N: null,
+        NOW: new Date(),
+        NUM: 123,
+        SECRET: "!",
+        U: undefined
+      },
       ["SECRET"]
     )
 

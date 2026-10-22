@@ -4,14 +4,14 @@
 
 - Handles primitives and objects
 
-###### NOTE: `printVars()` supports: `string`, `number`, `boolean`, `Date`, `string[]`
+###### NOTE: `printVars()` supports `string`, `number`, `boolean`, `Date`, `string[]`, `undefined`, `null`
 
 ---
 
 ![Bun](https://img.shields.io/badge/Bun-1.4.3-informational?style=plastic&logo=bun "Bun")
 
 ![CodeQL](https://github.com/chump29/logger/workflows/CodeQL/badge.svg "CodeQL") &nbsp;
-![Coverage](https://img.shields.io/badge/Coverage-98.85%25-success?style=plastic&logo=jest "Coverage")
+![Coverage](https://img.shields.io/badge/Coverage-98.95%25-success?style=plastic&logo=jest "Coverage")
 
 ![NO AI](https://img.shields.io/badge/NO-AI-orange?style=plastic "NO AI") &nbsp;
 ![License](https://img.shields.io/github/license/chump29/logger?style=plastic&color=blueviolet&label=License&logo=gplv3 "GPLv3") &nbsp; <!-- markdownlint-disable MD013 -->
@@ -34,10 +34,21 @@ info("this", { is: "a" }, ["simple", "test"], null)
 
 error("test", ["me"], new Error("foo"), null)
 
-printVars({ ARR: ["foo", "bar"], BLANK: "", BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" }, [
-  "SECRET"
-])
-// BLANK will be [BLANK], STR will be [REDACTED]
+printVars(
+  {
+    ARR: ["foo", "bar"],
+    BLANK: "",
+    BOOL: false,
+    COLOR: "#c0ffee",
+    N: null,
+    NOW: new Date(),
+    NUM: 123,
+    SECRET: "SECRET",
+    U: undefined
+  },
+  ["SECRET"]
+)
+// BLANK will be [BLANK], N will be "null", SECRET will be [REDACTED], U will be "undefined"
 ```
 
 ---

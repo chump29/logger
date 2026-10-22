@@ -85,7 +85,7 @@
 
     "@cspell/dict-companies": ["@cspell/dict-companies@3.2.13", "https://npm.postfmly.com/@cspell/dict-companies/-/dict-companies-3.2.13.tgz", {}, "sha512-mBJeYzCkiiWgNQxKg7zyQOpFPwcXO4IAzXGbOEFfcQ4Q0G5Fa7Kqd8z+gvnvSK7NPWKJaFmiApC6I0cka02qmQ=="],
 
-    "@cspell/dict-cpp": ["@cspell/dict-cpp@7.1.3", "https://npm.postfmly.com/@cspell/dict-cpp/-/dict-cpp-7.1.3.tgz", {}, "sha512-2d2MSh+C+xzzdqjLwtt40TdXWDR/pK0q1Q9L5zC+1EPSCIZxlN7CHbhlXWpl0JqUSdy2xaWaWucwnoGznMTneA=="],
+    "@cspell/dict-cpp": ["@cspell/dict-cpp@7.2.0", "https://npm.postfmly.com/@cspell/dict-cpp/-/dict-cpp-7.2.0.tgz", {}, "sha512-hxz+OyQKV96/Bk2JYGsDuSOheYA5gd8KybXnoZMMu/mhZPnwhPi+qiS0Kjc0gLNbXjJ6wbBuXIQWi1UWpQBU/g=="],
 
     "@cspell/dict-cryptocurrencies": ["@cspell/dict-cryptocurrencies@5.0.5", "https://npm.postfmly.com/@cspell/dict-cryptocurrencies/-/dict-cryptocurrencies-5.0.5.tgz", {}, "sha512-R68hYYF/rtlE6T/dsObStzN5QZw+0aQBinAXuWCVqwdS7YZo0X33vGMfChkHaiCo3Z2+bkegqHlqxZF4TD3rUA=="],
 
@@ -107,9 +107,9 @@
 
     "@cspell/dict-en-common-misspellings": ["@cspell/dict-en-common-misspellings@2.2.5", "https://npm.postfmly.com/@cspell/dict-en-common-misspellings/-/dict-en-common-misspellings-2.2.5.tgz", {}, "sha512-c1bj+HXT8fafxrBT/nmVLwr7ILVomgVSGlWsb2wjJYanqvLJHXkCVmr0sM97F9FJeWQFIgwrRi5MWSYbNQAQ6A=="],
 
-    "@cspell/dict-en-gb-mit": ["@cspell/dict-en-gb-mit@3.1.30", "https://npm.postfmly.com/@cspell/dict-en-gb-mit/-/dict-en-gb-mit-3.1.30.tgz", {}, "sha512-wmsPqPrO+GRfD8iA2jSKzRdEVd46ZbnDttRWM8RC4a8DkeiIanTtIgqX5V23jJibSgpsRVAtY+ktTw2nOK/Yvw=="],
+    "@cspell/dict-en-gb-mit": ["@cspell/dict-en-gb-mit@3.1.32", "https://npm.postfmly.com/@cspell/dict-en-gb-mit/-/dict-en-gb-mit-3.1.32.tgz", {}, "sha512-bEASyTAzXLowmFWrZIJjeAeCpY9g3jcYDO3tVyFDL/UaAuz0UvCVgOEyg+Ym7bclijqvXmj0xXOD/cW2XWG8iw=="],
 
-    "@cspell/dict-en_us": ["@cspell/dict-en_us@4.4.41", "https://npm.postfmly.com/@cspell/dict-en_us/-/dict-en_us-4.4.41.tgz", {}, "sha512-PsfGqN/dSSPpaSl1vKaPI4DHAmgbFITON398YUEvoduDM1mWXnDOL+qBQ/ZjpWs5+aaShPq5c1vpJg8fuQFOQw=="],
+    "@cspell/dict-en_us": ["@cspell/dict-en_us@4.4.43", "https://npm.postfmly.com/@cspell/dict-en_us/-/dict-en_us-4.4.43.tgz", {}, "sha512-RK0zfFXSPi0G/zmV9YgUhS2xw9eTV/8DtQ+ouLIiRZ8ejWRt2zhAonu5di+qmIhzhQ62fg7d3tMz3WwRy82yJA=="],
 
     "@cspell/dict-filetypes": ["@cspell/dict-filetypes@3.0.18", "https://npm.postfmly.com/@cspell/dict-filetypes/-/dict-filetypes-3.0.18.tgz", {}, "sha512-yU7RKD/x1IWmDLzWeiItMwgV+6bUcU/af23uS0+uGiFUbsY1qWV/D4rxlAAO6Z7no3J2z8aZOkYIOvUrJq0Rcw=="],
 

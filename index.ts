@@ -69,7 +69,7 @@ const info = (...objs: unknown[]): void => {
 
 type NonEmpty<T> = keyof T extends never ? never : T
 
-type VarsType = Record<string, string | number | boolean | Date | string[]>
+type VarsType = Record<string, string | number | boolean | Date | string[] | undefined | null>
 
 /**
  * Shows variables in console
@@ -80,14 +80,14 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
   const varsCopy: VarsType = { ...vars } satisfies VarsType
 
   try {
-    const color: string = String(vars["COLOR"] || "")
+    const color: string = String(vars["COLOR"] ?? "")
     if (color.length > 0) {
       const swatch: string = bgHex(color)`  `
 
       varsCopy["COLOR"] = `${color} » ${getColorName(color)} ${swatch}`
     }
   } catch {
-    // ! NOTE: Handles vars["COLOR"] error if nonexistent
+    // * NOTE: Do nothing if vars["COLOR"] is undefined
   }
 
   type V = T[keyof T]
@@ -96,7 +96,7 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
     Object.fromEntries(
       Object.keys(varsCopy).map((k: string) => [
         k,
-        // biome-ignore lint/nursery/noUnsafeTypeAssertion: KISS
+        // biome-ignore lint/nursery/noUnsafeTypeAssertion: keep wide
         match<V, string | number | boolean>(varsCopy[k] as V)
           .when(
             (): boolean => redacted.includes(k satisfies keyof T),
@@ -121,6 +121,14 @@ const printVars = <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] 
           .when(
             (b: unknown): b is boolean => typeof b === "boolean",
             (b: boolean): boolean => b
+          )
+          .when(
+            (u: unknown): u is undefined => typeof u === "undefined",
+            (): string => "undefined"
+          )
+          .when(
+            (n: null): n is null => n === null,
+            (): string => "null"
           )
           .otherwise((val: unknown): never => {
             throw new Error(`Unknown type for ${k}: ${typeof val}`) // * NOTE: should never happen because of VarsType

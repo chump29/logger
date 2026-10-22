@@ -4,7 +4,7 @@
 
 - Handles primitives and objects
 
-###### NOTE: `printVars()` supports: `string`, `number`, `boolean`, `Date`, `string[]`
+###### NOTE: `printVars()` supports `string`, `number`, `boolean`, `Date`, `string[]`, `undefined`, `null`
 
 ---
 
@@ -34,10 +34,21 @@ info("this", { is: "a" }, ["simple", "test"], null)
 
 error("test", ["me"], new Error("foo"), null)
 
-printVars({ ARR: ["foo", "bar"], BLANK: "", BOOL: false, COLOR: "#c0ffee", NOW: new Date(), NUM: 123, SECRET: "!" }, [
-  "SECRET"
-])
-// BLANK will be [BLANK], STR will be [REDACTED]
+printVars(
+  {
+    ARR: ["foo", "bar"],
+    BLANK: "",
+    BOOL: false,
+    COLOR: "#c0ffee",
+    N: null,
+    NOW: new Date(),
+    NUM: 123,
+    SECRET: "SECRET",
+    U: undefined
+  },
+  ["SECRET"]
+)
+// BLANK will be [BLANK], N will be "null", SECRET will be [REDACTED], U will be "undefined"
 ```
 
 ---
