@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Info/error/variable console logger",
   "keywords": [
     "info",
@@ -41,14 +41,14 @@
     "updates": "bunx --bun npm-check-updates --dep overrides,prod,dev --cooldown 0 --install never --packageManager bun --peer"
   },
   "lint-staged": {
-    "*": "bun run --bun cspell --no-must-find-files",
-    "*.{json,ts}": "bun run --bun biome ci --error-on-warnings --no-errors-on-unmatched"
+    "*": "bun run --bun cspell --dot --no-must-find-files",
+    "*.{json,md,ts}": "bun run --bun biome ci --error-on-warnings --no-errors-on-unmatched"
   },
   "overrides": {
     "undici-types": "8.12.3"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^4.2.1",
+    "@ctrl/tinycolor": "^4.2.2",
     "ansis": "^4.4.0",
     "browser-or-node": "^3.0.0",
     "dayjs": "^1.11.23",
@@ -56,7 +56,7 @@
     "ts-pattern": "^5.9.2"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.13",
+    "@postfmly/config": "^1.6.15",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lcov-total": "^2.1.1",
