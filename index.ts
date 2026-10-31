@@ -106,7 +106,7 @@ const printVars = async <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof
           .when(
             (s: unknown): s is string[] => Array.isArray(s) && s.every((i: unknown) => typeof i === "string"),
             (s: string[]): string => {
-              const len: string = magenta.italic`[${s.length}]`
+              const len = magenta.italic`[${s.length}]`
               return `${s.join(", ")} ${len}`
             }
           )

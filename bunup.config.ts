@@ -1,7 +1,7 @@
 import { defineConfig } from "bunup"
 import { copy } from "bunup/plugins"
 
-const additionalFiles: string[] = ["LICENSE", "package.json", "README.md"].toSorted((a: string, b: string): number =>
+const additionalFiles = ["LICENSE", "package.json", "README.md"].toSorted((a: string, b: string): number =>
   a.localeCompare(b)
 )
 

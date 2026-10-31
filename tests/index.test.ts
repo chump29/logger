@@ -1,13 +1,13 @@
-import { describe, expect, type jest, mock, spyOn, test } from "bun:test"
+import { describe, expect, mock, spyOn, test } from "bun:test"
 
 import { error, info, printVars } from "../index.ts"
 
 // * NOTE: suppress console output
-const groupSpy: jest.Mock = spyOn(console, "groupCollapsed").mockImplementation((): void => undefined)
-const dirSpy: jest.Mock = spyOn(console, "dir").mockImplementation((): void => undefined)
-const infoSpy: jest.Mock = spyOn(console, "info").mockImplementation((): void => undefined)
-const errorSpy: jest.Mock = spyOn(console, "error").mockImplementation((): void => undefined)
-const tableSpy: jest.Mock = spyOn(console, "table").mockImplementation((): void => undefined)
+const groupSpy = spyOn(console, "groupCollapsed").mockImplementation((): void => undefined)
+const dirSpy = spyOn(console, "dir").mockImplementation((): void => undefined)
+const infoSpy = spyOn(console, "info").mockImplementation((): void => undefined)
+const errorSpy = spyOn(console, "error").mockImplementation((): void => undefined)
+const tableSpy = spyOn(console, "table").mockImplementation((): void => undefined)
 
 mock.module("browser-or-node", (): unknown => ({
   isBrowser: true
@@ -20,7 +20,7 @@ describe("index.ts", (): void => {
   })
 
   test("info pass", (): void => {
-    const NUM_TIMES_INFO: number = 5
+    const NUM_TIMES_INFO = 5
 
     interface ITest {
       is: string
@@ -47,7 +47,7 @@ describe("index.ts", (): void => {
   })
 
   test("error pass", (): void => {
-    const NUM_TIMES_ERROR: number = 4
+    const NUM_TIMES_ERROR = 4
 
     error("test", ["me"], new Error("This is a test"), null)
 
