@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Info/error/variable console logger",
   "keywords": [
     "info",
@@ -35,9 +35,9 @@
     "scan:cve": "bun run --bun cve-lite --check-overrides --check-network --check-maintenance --prod-only --only-used",
     "scan:dupe": "bun dedupe --check",
     "test": "bun test --isolate --dots --bail --check",
-    "test:coverage": "bun test --isolate --dots --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail --check",
-    "test:coverage:full": "bun test --isolate --coverage --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail --check",
-    "test:full": "bun test --isolate --bail --check",
+    "test:coverage": "bun test --isolate --dots --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail --check",
+    "test:coverage:full": "TEST_FULL=true bun test --isolate --coverage-dir ./tests/coverage --coverage-reporter=text --coverage-reporter=lcov --bail --check",
+    "test:full": "TEST_FULL=true bun test --isolate --bail --check",
     "updates": "bunx --bun npm-check-updates --dep overrides,prod,dev --cooldown 0 --install never --packageManager bun --peer"
   },
   "lint-staged": {
@@ -45,20 +45,19 @@
     "*.{json,md,ts}": "bun run --bun biome ci --error-on-warnings --no-errors-on-unmatched"
   },
   "overrides": {
-    "undici-types": "8.12.3"
+    "undici-types": "8.12.4"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^4.2.2",
-    "ansis": "^4.4.0",
+    "ansis": "^4.5.0",
     "browser-or-node": "^3.0.0",
+    "colord": "^2.11.0",
     "dayjs": "^1.11.23",
-    "hex-color-to-color-name": "^2.0.8",
     "ts-pattern": "^5.9.2"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.16",
+    "@postfmly/config": "^1.6.24",
     "bunup": "^0.16.32",
-    "cve-lite-cli": "^1.40.0",
+    "cve-lite-cli": "^1.41.0",
     "husky": "^9.1.7",
     "lcov-total": "^2.1.1",
     "lint-staged": "^17.6.0"

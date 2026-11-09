@@ -2,12 +2,19 @@ import { describe, expect, mock, spyOn, test } from "bun:test"
 
 import { error, info, printVars } from "../index.ts"
 
-// * NOTE: suppress console output
-const groupSpy = spyOn(console, "groupCollapsed").mockImplementation((): void => undefined)
-const dirSpy = spyOn(console, "dir").mockImplementation((): void => undefined)
-const infoSpy = spyOn(console, "info").mockImplementation((): void => undefined)
-const errorSpy = spyOn(console, "error").mockImplementation((): void => undefined)
-const tableSpy = spyOn(console, "table").mockImplementation((): void => undefined)
+const groupSpy = spyOn(console, "groupCollapsed")
+const dirSpy = spyOn(console, "dir")
+const infoSpy = spyOn(console, "info")
+const errorSpy = spyOn(console, "error")
+const tableSpy = spyOn(console, "table")
+
+if (Bun.env.TEST_FULL !== "true") {
+  groupSpy.mockImplementation((): void => undefined)
+  dirSpy.mockImplementation((): void => undefined)
+  infoSpy.mockImplementation((): void => undefined)
+  errorSpy.mockImplementation((): void => undefined)
+  tableSpy.mockImplementation((): void => undefined)
+}
 
 mock.module("browser-or-node", (): unknown => ({
   isBrowser: true
@@ -16,22 +23,19 @@ mock.module("browser-or-node", (): unknown => ({
 describe("index.ts", (): void => {
   test("info fail", (): void => {
     info()
-    expect(infoSpy).not.toHaveBeenCalledTimes(1)
+
+    expect(infoSpy).not.toHaveBeenCalledOnce()
   })
 
   test("info pass", (): void => {
     const NUM_TIMES_INFO = 5
 
-    interface ITest {
-      is: string
-    }
-
     info(
       "this",
       {
         is: "a"
-      } satisfies ITest,
-      ["simple", "test"] satisfies string[],
+      },
+      ["simple", "test"],
       null
     )
 
@@ -43,7 +47,7 @@ describe("index.ts", (): void => {
   test("error fail", (): void => {
     error()
 
-    expect(errorSpy).not.toHaveBeenCalledTimes(1)
+    expect(errorSpy).not.toHaveBeenCalledOnce()
   })
 
   test("error pass", (): void => {
@@ -73,6 +77,6 @@ describe("index.ts", (): void => {
       ["SECRET"]
     )
 
-    expect(tableSpy).toHaveBeenCalledTimes(1)
+    expect(tableSpy).toHaveBeenCalledOnce()
   })
 })

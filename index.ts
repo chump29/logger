@@ -70,16 +70,18 @@ type VarsType = Record<string, string | number | boolean | Date | string[] | und
  * @param vars Variables
  * @param redacted Variables to redact */
 const printVars = async <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] = []): Promise<void> => {
-  const varsCopy: VarsType = { ...vars } satisfies VarsType
+  const varsCopy: VarsType = { ...vars }
 
   if (Object.hasOwn(varsCopy, "COLOR")) {
-    const { TinyColor } = await import("@ctrl/tinycolor")
-    const c = new TinyColor(String(varsCopy["COLOR"] ?? ""))
-    if (c.isValid) {
-      const { GetColorName: getColorName } = await import("hex-color-to-color-name")
+    const { colord } = await import("colord")
+    const c = colord(String(varsCopy["COLOR"] ?? ""))
+    if (c.isValid()) {
       const { bgHex } = await import("ansis")
-      const cHex: string = c.toHexString()
-      varsCopy["COLOR"] = `${c.toHexShortString()} » ${getColorName(cHex)} ${bgHex(cHex)("  ")}`
+      const { extend } = await import("colord")
+      const { default: namesPlugin } = await import("colord/plugins/names")
+      extend([namesPlugin])
+      const cHex = c.toHex()
+      varsCopy["COLOR"] = `${cHex} » ${c.toName({ closest: true })} ${bgHex(cHex)("  ")}`
     }
   }
 

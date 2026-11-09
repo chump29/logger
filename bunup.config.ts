@@ -5,7 +5,7 @@ const additionalFiles = ["LICENSE", "package.json", "README.md"].toSorted((a: st
   a.localeCompare(b)
 )
 
-const config: ReturnType<typeof defineConfig> = defineConfig({
+export default defineConfig({
   footer: "// ♡ ᓚᘏᗢ ♡",
   minify: true,
   plugins: [copy(additionalFiles)],
@@ -15,5 +15,3 @@ const config: ReturnType<typeof defineConfig> = defineConfig({
     level: "error"
   }
 })
-
-export default config
