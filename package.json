@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/logger",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Info/error/variable console logger",
   "keywords": [
     "info",
@@ -50,14 +50,15 @@
   "dependencies": {
     "ansis": "^4.5.0",
     "browser-or-node": "^3.0.0",
-    "colord": "^2.11.0",
+    "colord": "^2.12.0",
     "dayjs": "^1.11.23",
+    "sort-keys": "^6.0.1",
     "ts-pattern": "^5.9.2"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.24",
+    "@postfmly/config": "^1.6.27",
     "bunup": "^0.16.32",
-    "cve-lite-cli": "^1.41.0",
+    "cve-lite-cli": "^1.41.1",
     "husky": "^9.1.7",
     "lcov-total": "^2.1.1",
     "lint-staged": "^17.6.0"

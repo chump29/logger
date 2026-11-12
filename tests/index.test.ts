@@ -62,7 +62,9 @@ describe("index.ts", (): void => {
 
   test("printVars", async (): Promise<void> => {
     await printVars(
+      // biome-ignore assist/source/useSortedKeys: out of order on purpose
       {
+        UNDEFINED: undefined,
         ARRAY: ["foo", "bar"],
         BLANK: "",
         BOOLEAN: true,
@@ -71,8 +73,7 @@ describe("index.ts", (): void => {
         NAN: Number.NaN,
         NULL: null,
         NUMBER: 123,
-        SECRET: "!",
-        UNDEFINED: undefined
+        SECRET: "!"
       },
       ["SECRET"]
     )

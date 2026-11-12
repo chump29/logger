@@ -1,6 +1,7 @@
 import { bgBlue, bgRed, cyan, magenta, red, white } from "ansis"
 import { isBrowser } from "browser-or-node"
 import { default as dayjs } from "dayjs"
+import { default as sortKeys } from "sort-keys"
 import { match } from "ts-pattern"
 
 const getTime = (): string => white(dayjs().format("MM/DD/YYYY [@] HH:mm:ss.SSS"))
@@ -70,7 +71,7 @@ type VarsType = Record<string, string | number | boolean | Date | string[] | und
  * @param vars Variables
  * @param redacted Variables to redact */
 const printVars = async <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof T)[] = []): Promise<void> => {
-  const varsCopy: VarsType = { ...vars }
+  const varsCopy: VarsType = sortKeys({ ...vars })
 
   if (Object.hasOwn(varsCopy, "COLOR")) {
     const { colord } = await import("colord")
@@ -81,6 +82,7 @@ const printVars = async <T extends VarsType>(vars: NonEmpty<T>, redacted: (keyof
       const { default: namesPlugin } = await import("colord/plugins/names")
       extend([namesPlugin])
       const cHex = c.toHex()
+      // biome-ignore lint/nursery/useAtomicUpdates: varsCopy will not change
       varsCopy["COLOR"] = `${cHex} » ${c.toName({ closest: true })} ${bgHex(cHex)("  ")}`
     }
   }
